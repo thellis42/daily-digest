@@ -2,11 +2,11 @@ name: Daily Digest
 
 on:
   schedule:
-    # 6:30am Las Vegas. GitHub cron is UTC-only, so we fire at BOTH possible
-    # times and the script exits unless it's actually 6am Pacific.
-    - cron: "30 13 * * *"   # 06:30 during Pacific Daylight Time (summer)
-    - cron: "30 14 * * *"   # 06:30 during Pacific Standard Time (winter)
-  workflow_dispatch: {}      # manual run — ignores the 6am gate
+    # Two builds per day at fixed UTC times. The later run refreshes the same
+    # day's page with newer news. (GitHub cron is UTC-only and may run late.)
+    - cron: "0 15 * * *"   # 15:00 UTC — ~08:00 PDT / ~07:00 PST (morning)
+    - cron: "0 23 * * *"   # 23:00 UTC — ~16:00 PDT / ~15:00 PST (afternoon refresh)
+  workflow_dispatch: {}      # manual run — builds immediately
 
 permissions:
   contents: write
@@ -15,17 +15,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
-          node-version: "20"
+          node-version: "24"
       - run: npm install
 
       - name: Generate digest
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          SITE_URL: https://ws-daily-digest.netlify.app          # ← set to your Netlify URL
-          FORCE: ${{ github.event_name == 'workflow_dispatch' }}
+          SITE_URL: https://https://ws-daily-digest.netlify.app/          # ← set to your Netlify URL
           # DIGEST_MODEL: claude-opus-4-8                   # richer writing, higher cost
           # --- optional email (also add these as repo secrets) ---
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
