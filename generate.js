@@ -9,7 +9,7 @@ const KEEP_DAYS = 7;
 const OUT = "public";
 const ARCHIVE = path.join(OUT, "archive");
 const DATA = "data";
-const SITE_URL = process.env.SITE_URL || "https://YOUR-SITE.netlify.app";
+const SITE_URL = (process.env.SITE_URL || "https://YOUR-SITE.netlify.app").replace(/\/+$/, "");
 const FORCE = process.env.FORCE === "true"; // manual runs set this
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
@@ -62,7 +62,7 @@ dates). Cover these sections and item counts:
 - feelGood: 3 items (science, space, uplifting)
 - onThisDay: 4 real historical events that occurred on this calendar date
 - topPicks: the 3 HIGHEST-IMPACT stories of the day, each with a one-sentence teaser (max ~20 words)
-  written to make a reader want to click. These should be your editorial picks across all sections.
+  written to make a reader want to click. Editorial picks across all sections.
 
 Each story object MUST have exactly: "headline", "body", "source". onThisDay items MUST have exactly:
 "year", "event". topPicks items MUST have exactly: "headline", "teaser".
@@ -78,15 +78,29 @@ Return ONLY a single JSON object, no markdown fences, no preamble, in exactly th
   "topPicks": []
 }`;
 
-// ---- call the API ----
-const resp = await client.messages.create({
-  model: MODEL,
-  max_tokens: 8000,
-  tools: [{ type: "web_search_20250305", name: "web_search", max_uses: 12 }],
-  messages: [{ role: "user", content: prompt }],
-});
+// ---- call the API (loop to handle web-search "pause_turn" continuations) ----
+async function research() {
+  const messages = [{ role: "user", content: prompt }];
+  const texts = [];
+  for (let i = 0; i < 12; i++) {
+    const resp = await client.messages.create({
+      model: MODEL,
+      max_tokens: 16000,
+      tools: [{ type: "web_search_20250305", name: "web_search", max_uses: 15 }],
+      messages,
+    });
+    for (const b of resp.content) if (b.type === "text") texts.push(b.text);
+    if (resp.stop_reason === "pause_turn") {
+      // model paused mid-turn (still searching): feed its progress back and continue
+      messages.push({ role: "assistant", content: resp.content });
+      continue;
+    }
+    break; // end_turn (or max_tokens) — the turn is complete
+  }
+  return texts.join("\n");
+}
 
-const rawText = resp.content.filter((b) => b.type === "text").map((b) => b.text).join("\n");
+const rawText = await research();
 
 function extractJSON(s) {
   const t = s.replace(/```json/gi, "```").replace(/```/g, "").trim();
@@ -103,11 +117,10 @@ try {
   throw e; // fail the run so a broken page never deploys
 }
 
-// stamp values we control
 digest.date = humanDate;
 digest.generatedAt = generatedAt;
 
-// ---- persist today's data (source of truth) ----
+// ---- persist today's data ----
 fs.mkdirSync(DATA, { recursive: true });
 fs.writeFileSync(path.join(DATA, `${dateKey}.json`), JSON.stringify(digest, null, 2));
 
@@ -133,7 +146,8 @@ fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(ARCHIVE, { recursive: true });
 for (const key of keptKeys) {
   const d = JSON.parse(fs.readFileSync(path.join(DATA, `${key}.json`), "utf8"));
-  const html = renderPage({ digest: d, navDates, currentKey: key });
+  const pageUrl = key === keptKeys[0] ? SITE_URL : `${SITE_URL}/archive/${key}.html`;
+  const html = renderPage({ digest: d, navDates, currentKey: key, pageUrl });
   fs.writeFileSync(path.join(ARCHIVE, `${key}.html`), html);
   if (key === keptKeys[0]) fs.writeFileSync(path.join(OUT, "index.html"), html);
 }
