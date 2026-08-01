@@ -1,5 +1,5 @@
 // Renders one full standalone HTML page from a digest object.
-export function renderPage({ digest, navDates, currentKey }) {
+export function renderPage({ digest, navDates, currentKey, pageUrl }) {
   const TAB_CONFIG = [
     { key: "defense", label: "🛡️ Defense", color: "#1d4ed8" },
     { key: "us", label: "🇺🇸 US", color: "#7c3aed" },
@@ -10,7 +10,7 @@ export function renderPage({ digest, navDates, currentKey }) {
     { key: "cities", label: "🏙️ Las Vegas", color: "#ea580c" },
     { key: "feelGood", label: "✨ Feel Good", color: "#15803d" },
   ];
-  const payload = JSON.stringify({ digest, navDates, currentKey, TAB_CONFIG }).replace(/</g, "\\u003c");
+  const payload = JSON.stringify({ digest, navDates, currentKey, pageUrl, TAB_CONFIG }).replace(/</g, "\\u003c");
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -26,6 +26,9 @@ export function renderPage({ digest, navDates, currentKey }) {
   .header-row { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
   .eyebrow { font-size:11px; color:#475569; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:4px; }
   .date { font-size:22px; font-weight:800; color:#f8fafc; letter-spacing:-0.5px; }
+  .share-btn { margin-top:12px; background:#1e3a5f; color:#93c5fd; border:1px solid #2c4a6e; border-radius:8px; padding:8px 14px; font-size:12.5px; font-weight:700; cursor:pointer; font-family:inherit; transition:all .15s ease; }
+  .share-btn:hover { background:#24466f; }
+  .share-btn.copied { background:#14532d; color:#86efac; border-color:#166534; }
   .badge { background:#1e3a5f; border-radius:8px; padding:6px 12px; font-size:11px; color:#60a5fa; font-weight:700; text-align:center; white-space:nowrap; }
   .badge span { display:block; font-weight:400; color:#94a3b8; font-size:10px; margin-top:2px; }
   .navbar { background:#0f172a; border-bottom:1px solid #1e293b; overflow-x:auto; }
@@ -60,12 +63,18 @@ export function renderPage({ digest, navDates, currentKey }) {
   .otd-row { display:flex; gap:12px; margin-bottom:10px; }
   .otd-year { min-width:42px; font-weight:700; font-size:13px; }
   .otd-event { color:#94a3b8; font-size:13px; line-height:1.5; }
+  .toast { position:fixed; left:50%; bottom:24px; transform:translateX(-50%); background:#14532d; color:#dcfce7; border:1px solid #166534; padding:10px 18px; border-radius:10px; font-size:13px; font-weight:600; opacity:0; pointer-events:none; transition:opacity .2s ease; z-index:50; }
+  .toast.show { opacity:1; }
   .footer { margin-top:24px; padding-top:16px; border-top:1px solid #1e293b; color:#334155; font-size:11px; text-align:center; line-height:1.7; }
 </style>
 </head>
 <body>
   <div class="header"><div class="wrap"><div class="header-row">
-    <div><div class="eyebrow">Daily Digest</div><div class="date" id="digest-date"></div></div>
+    <div>
+      <div class="eyebrow">Daily Digest</div>
+      <div class="date" id="digest-date"></div>
+      <button class="share-btn" id="share-btn" onclick="copyShare()">▸ Share this digest</button>
+    </div>
     <div class="badge">🔄 updated<span id="stamp"></span></div>
   </div></div></div>
 
@@ -88,12 +97,43 @@ export function renderPage({ digest, navDates, currentKey }) {
     <div class="footer" id="footer"></div>
   </div>
 
+  <div class="toast" id="toast">✓ Copied to clipboard</div>
+
 <script>
 const STATE = ${payload};
-const DIGEST = STATE.digest, NAV = STATE.navDates, CURRENT = STATE.currentKey, TAB_CONFIG = STATE.TAB_CONFIG;
+const DIGEST = STATE.digest, NAV = STATE.navDates, CURRENT = STATE.currentKey, PAGE_URL = STATE.pageUrl, TAB_CONFIG = STATE.TAB_CONFIG;
 let activeTab = "defense";
 
 function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+
+// ---- share ----
+function buildBlurb(){
+  const picks = (DIGEST.topPicks||[]).slice(0,3);
+  return "📰 Daily Digest — " + DIGEST.date + "\\n" + PAGE_URL + "\\n\\nToday's 3 biggest:\\n" +
+    picks.map((p,i)=>(i+1)+". "+p.headline+" — "+p.teaser).join("\\n");
+}
+function flashCopied(){
+  const btn = document.getElementById("share-btn");
+  const toast = document.getElementById("toast");
+  btn.classList.add("copied"); btn.textContent = "✓ Copied!";
+  toast.classList.add("show");
+  setTimeout(()=>{ btn.classList.remove("copied"); btn.textContent = "▸ Share this digest"; toast.classList.remove("show"); }, 2000);
+}
+function fallbackCopy(text){
+  const ta = document.createElement("textarea");
+  ta.value = text; ta.setAttribute("readonly",""); ta.style.position="fixed"; ta.style.opacity="0";
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand("copy"); flashCopied(); } catch(e){ window.prompt("Copy this:", text); }
+  document.body.removeChild(ta);
+}
+function copyShare(){
+  const text = buildBlurb();
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(flashCopied).catch(()=>fallbackCopy(text));
+  } else { fallbackCopy(text); }
+}
+
+// ---- render ----
 function cardHTML(story, accent){
   const long = story.body.length > 160;
   const preview = long ? story.body.slice(0,160).replace(/\\s+$/,"") + "…" : story.body;
