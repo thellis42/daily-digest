@@ -1,223 +1,223 @@
 {
   "breaking": {
-    "headline": "US Prepares Major New Wave of Strikes on Iran This Weekend",
-    "body": "American officials say Washington and Israel are readying one of the most intense bombing campaigns yet against Iranian energy infrastructure, with strikes possible throughout the weekend and preparations reportedly accelerating around sites like Pickaxe Mountain south of Tehran. President Trump told Cabinet officials the US would keep 'hitting them very hard' until Iran capitulates, while the White House press secretary said Tehran 'will continue to pay' until it negotiates seriously. The escalation comes as Kuwait says it intercepted Iranian drones aimed at military facilities and US embassies across the region, including in Amman, Jerusalem and Baghdad, warned citizens to prepare for possible 'unforeseen escalation.'",
-    "source": "CBS News / CNN"
+    "headline": "US Prepares Fresh Iran Strikes as War Nears Six-Month Mark",
+    "body": "US officials tell reporters that new strikes on Iran could come as soon as this weekend, though the scope remains undecided and could still be called off. The State Department has renewed warnings for Americans to consider leaving the Middle East, Kuwait says it intercepted Iranian drones early Saturday, and Tehran has threatened Gulf states hosting US forces. The conflict, which began in late February, has now stretched past five months with no clear endgame despite repeated White House claims that victory is near.",
+    "source": "CNN, Al Jazeera"
   },
   "tabs": {
     "defense": [
       {
-        "headline": "Top US General in Europe Warns of Destroyer Shortfall Protecting Israel",
-        "body": "The senior American commander in Europe privately told the Pentagon this week that he no longer has enough naval assets to keep shielding Israel from Iranian ballistic missiles, a sign the prolonged Iran war is straining US force posture. Officials say the shortage of Arleigh Burke-class destroyers is forcing EUCOM to prioritize homeland defense missions over continued missile-defense support for Israel. The warning underscores how a five-month conflict has stretched the Navy's surface fleet across multiple theaters simultaneously.",
-        "source": "Washington Post"
+        "headline": "Pentagon Weighs Next Wave of Iran Strikes",
+        "body": "CENTCOM's most recent 'heavy wave' of strikes hit sites across Iran's Gulf-facing provinces, including Bushehr, Fars and Qeshm Island, after a brief pause was broken by Iranian missile fire on US forces. Officials now say another round could launch this weekend, with Trump promising to hit Tehran 'very hard.' A former defense secretary has warned the US is now locked into what he calls an unwinnable war.",
+        "source": "CNN, Al Jazeera"
       },
       {
-        "headline": "Space Force Locks in $1.6 Billion SpaceX Launch Deal",
-        "body": "The Space Force has awarded SpaceX $1.6 billion to conduct nine National Security Space Launches through the end of 2027, deepening the Pentagon's reliance on the company for classified and military satellite missions. The award adds to a string of recent NSSL awards as the military races to build out resilient space architecture amid rising Chinese and Russian counterspace capabilities.",
-        "source": "InsideDefense.com"
+        "headline": "Marine F-35B Crashes in California, Pilot Ejects Safely",
+        "body": "A Marine Corps F-35B stealth fighter went down in California, with the pilot ejecting and surviving. The Corps classified it a 'Class A mishap,' the most severe category, reserved for incidents causing more than $2 million in damage, destroying an aircraft, or killing a service member.",
+        "source": "Las Vegas Review-Journal"
       },
       {
-        "headline": "Pentagon Pours $100 Million Into Counter-Drone Sensing Startup",
-        "body": "The Defense Department is giving passive radar and distributed-sensing firm Hidden Level $100 million to scale up counter-drone detection technology, reflecting growing urgency around low-cost drone threats to bases and troops. The investment fits a broader Pentagon push toward passive, jam-resistant sensing as adversaries proliferate cheap unmanned systems across multiple theaters.",
-        "source": "InsideDefense.com"
+        "headline": "Space Force Hands SpaceX $1.6 Billion Launch Deal",
+        "body": "The Space Force awarded SpaceX a $1.6 billion contract covering nine National Security Space Launch missions to be completed by the end of 2027, deepening the Pentagon's reliance on SpaceX for military satellite launches amid a broader Golden Dome and space-security buildup.",
+        "source": "Inside Defense"
       },
       {
-        "headline": "Navy Boosts SPY-6 Radar Contract to $3.4 Billion",
-        "body": "The Navy has modified its production contract for the SPY-6 family of radars, raising its potential value to $3.4 billion as the service accelerates fielding of the advanced sensor across destroyers and other surface combatants. The upgrade is central to countering increasingly sophisticated missile threats from China, Russia and Iran-aligned forces.",
-        "source": "InsideDefense.com"
+        "headline": "Pentagon Bets $100 Million on Counter-Drone Sensing Startup",
+        "body": "The Defense Department is directing $100 million to Hidden Level, a passive radar and distributed sensing company, to scale technology aimed at detecting and defeating drones, part of a wider push including a $158 million reprogramming for the Joint Interagency Task Force's Domestic Shield counter-drone initiative protecting US infrastructure.",
+        "source": "Inside Defense"
       },
       {
-        "headline": "MQ-25 Refueling Drone Program Slips Further Behind Schedule",
-        "body": "The Navy's carrier-based MQ-25 Stingray refueling drone is now more than five years behind its original schedule after another delay to its initial operational capability date, raising questions about the service's carrier air wing modernization plans. The repeated slips add to broader concerns in Congress about the pace of unmanned naval aviation development relative to Chinese advances in the Pacific.",
-        "source": "InsideDefense.com"
+        "headline": "Senate Confirms Slate of Pentagon and Space Officials",
+        "body": "The Senate approved an en bloc package confirming nominees for Pentagon comptroller, Space Force acquisition chief, and the director of the National Reconnaissance Office, filling key leadership posts as the department pushes ahead on space launch and acquisition reform priorities.",
+        "source": "Inside Defense"
       }
     ],
     "us": [
       {
-        "headline": "Trump's Approval Sinks to New Low Ahead of Midterms",
-        "body": "A fresh round of polling shows President Trump is more unpopular than at any point in his term as the 2026 midterm campaign heats up, adding pressure on Republican candidates already navigating a difficult electoral map. The numbers come amid mounting scrutiny of the administration's handling of the Iran war, immigration enforcement and economic affordability concerns.",
-        "source": "Washington Post"
+        "headline": "New Trump Tariffs on 60 Countries Take Effect",
+        "body": "A fresh round of tariffs ranging from 10% to 12.5% on 60 trading partners, including the EU, UK, China and Canada, replaced a stopgap 10% baseline tariff that lapsed after the Supreme Court ruled Trump's earlier emergency-powers tariff authority unlawful. Goods from the affected partners account for roughly 99% of US imports, and the EU's foreign policy chief has publicly disputed the administration's forced-labor justification for the move.",
+        "source": "CNN, CNBC"
       },
       {
-        "headline": "Trump Media Sells Investors Paid Early Access to Truth Social Posts",
-        "body": "Trump's media company is offering investors early access to his Truth Social feed for as much as $100,000 a month, a arrangement that ethics watchdogs and legal experts say raises serious conflict-of-interest concerns for a sitting president. Critics argue the scheme effectively monetizes presidential statements that can move markets before the general public sees them.",
-        "source": "NPR"
-      },
-      {
-        "headline": "Virginia Supreme Court Blocks Democrats' Mid-Decade Redistricting Push",
-        "body": "Virginia's Supreme Court has thrown out a Democratic plan to redraw congressional lines mid-decade that could have created up to four additional Democratic-leaning districts ahead of the 2026 midterms. The ruling deals a significant setback to national Democratic efforts to counter Republican-favorable maps drawn elsewhere in the country this cycle.",
+        "headline": "GOP Senators Stall Blanche's Attorney General Nomination",
+        "body": "Senators Thom Tillis and John Cornyn are withholding support for Todd Blanche's nomination as attorney general, pressing for assurances that a controversial 'anti-weaponization' fund tied to Trump's IRS settlement is truly dead. Trump has publicly insisted the fund is finished even as he continues to defend its creation.",
         "source": "NBC News"
       },
       {
-        "headline": "AG Nominee Todd Blanche's Confirmation Hangs in the Balance",
-        "body": "Senate consideration of Todd Blanche's nomination to be Attorney General remains uncertain as lawmakers weigh his record alongside other contentious personnel and policy fights consuming the chamber's floor time. His nomination is unfolding against the backdrop of the Senate's broader summer push on Russia sanctions and defense confirmations.",
+        "headline": "New York Times Sues Pentagon Over Press Restrictions",
+        "body": "The New York Times has filed suit against the Pentagon, alleging violations of journalists' First Amendment rights after Defense Secretary Pete Hegseth imposed tighter rules that drove nearly all mainstream outlets, including the AP and NPR, out of the Pentagon press pool in favor of a smaller, more sympathetic press corps.",
+        "source": "NPR"
+      },
+      {
+        "headline": "Vermont Governor Pushes Back on Federal Election Overhaul",
+        "body": "Republican Governor Phil Scott of Vermont broke with Trump's push to reshape how US election systems are run, arguing that election administration belongs to the states rather than Washington, a rare intra-party rebuke amid the administration's broader push for federal control over voting infrastructure.",
         "source": "NBC News"
       }
     ],
     "pacific": [
       {
-        "headline": "Chinese Military Pressure on Taiwan Persists as Taipei Tests Wartime Production",
-        "body": "Chinese fighter jets and naval vessels continue operating around Taiwan almost daily, with Taipei's coast guard reporting a sharp rise in Chinese government ships near the island in recent weeks. In response, Taiwan is running drills to test whether civilian factories could pivot to wartime defense production and is conducting live-fire naval and coast guard exercises to practice keeping sea lanes open during a potential blockade.",
-        "source": "The Defense Post"
+        "headline": "Kim Jong Un Unveils Five-Year Military Modernization Drive",
+        "body": "North Korea's Ninth Party Congress outlined a new five-year plan calling for submarine-launched ICBMs, AI-enabled unmanned attack systems and anti-satellite weapons. Kim was re-elected general secretary and formally designated South Korea the North's 'principal enemy,' abandoning the long-standing goal of reunification.",
+        "source": "NewsNow/NK News"
       },
       {
-        "headline": "Analysts Link Dip in PLA Activity to Iran War Distraction and Internal Purges",
-        "body": "A Heritage Foundation-linked analysis found that People's Liberation Army activity around Taiwan noticeably dipped between late January and mid-March 2026, a lull analysts attribute partly to internal Chinese military purges and partly to Beijing's attention being pulled toward the escalating US-Iran conflict. The same period saw Taiwan opposition leader Cheng Li-Wun make the first visit by a sitting KMT leader to Beijing since 2016.",
-        "source": "The Daily Signal"
+        "headline": "Chinese Fighter Patrols Near Taiwan Mysteriously Pause",
+        "body": "For nearly two weeks, Chinese fighter jets have stopped their regular incursions near Taiwan, and analysts say no one has a clear explanation for the lull, a notable break from the near-daily gray-zone pressure Beijing has applied around the island in recent years.",
+        "source": "CNN"
       },
       {
-        "headline": "US, Japan and South Korea Diplomats Coordinate on North Korea in Manila",
-        "body": "Top diplomats from the United States, Japan and South Korea met on the sidelines of ASEAN ministerial meetings in Manila to align strategy on North Korea and deepen trilateral economic and security cooperation. Secretary of State Marco Rubio joined counterparts Cho Hyun and Toshimitsu Motegi, building on trilateral coordination begun at the NATO summit in Ankara earlier in July.",
-        "source": "UPI"
+        "headline": "Taipei Protests Beijing's Shifted Flight Path Near Median Line",
+        "body": "Taiwan has lodged a protest after China unilaterally moved a civil aviation flight path closer to the sensitive median line dividing the Taiwan Strait, a move Taipei calls a further erosion of the informal boundary that has long helped prevent direct military contact.",
+        "source": "CNN"
       },
       {
-        "headline": "US, Japan and South Korea Sign SMR Cooperation Pact for Indo-Pacific",
-        "body": "The three allies signed a memorandum establishing a framework to jointly deploy small modular nuclear reactors in partner countries, with an initial focus on the Indo-Pacific region. Officials framed the pact as advancing both energy security and strategic ties among partner nations wary of overreliance on Chinese-linked infrastructure.",
-        "source": "US Department of State"
+        "headline": "North Korean Troops Deepen Russia's Kursk Fight",
+        "body": "Thousands of North Korean soldiers remain deployed to Russia's Kursk region under a 2024 mutual-defense pact, sustaining heavy casualties as Pyongyang deepens military ties with Moscow, including a new memorial museum in Pyongyang honoring troops killed fighting for Russia against Ukraine.",
+        "source": "Al Jazeera"
       },
       {
-        "headline": "North Korean Hackers Weaponize OpenAI's GPT-4o for Phishing Scams",
-        "body": "The North Korea-linked BlueNoroff hacking group has been found using OpenAI's GPT-4o model to generate fake Zoom meeting participants as part of a sophisticated phishing kit, illustrating how state-linked actors are co-opting commercial AI tools for espionage and cybercrime. The tactic adds to a growing list of ways Pyongyang-affiliated groups exploit Western AI systems.",
-        "source": "AI Weekly"
+        "headline": "South Korea Accelerates Drone and Counter-Drone Buildup",
+        "body": "Seoul unveiled a sweeping plan to rapidly expand its military drone and counter-drone capabilities, citing lessons from modern conflicts abroad and the growing threat from North Korean weapons development, including Pyongyang's push toward AI-enabled attack drones.",
+        "source": "Yahoo News"
       }
     ],
     "europe": [
       {
-        "headline": "Senate Advances Sweeping Russia-Iran Sanctions Bill Named for Lindsey Graham",
-        "body": "The Senate voted 84-12 to move forward with the 'Lindsey O. Graham Sanctioning Russia and Iran Act of 2026,' which would authorize tariffs of up to 200% on major buyers of Russian oil and gas while sanctioning Putin, senior officials, oligarchs and Russia's sanctions-evading shadow fleet. Ukrainian President Volodymyr Zelensky watched the earlier procedural vote from the Senate gallery, calling it 'a step towards peace,' with the bill also extending Iran sanctions through 2031.",
-        "source": "Axios / Al Jazeera"
+        "headline": "Senate Set to Vote on Toughened Russia Sanctions Package",
+        "body": "The US Senate is scheduled to vote on a revised sanctions bill targeting Russian President Vladimir Putin, senior military and political leaders, and key financial and energy institutions, days after Ukraine struck an Iranian vessel in the Caspian Sea that Kyiv says was tied to Russian naval operations.",
+        "source": "Al Jazeera, NBC News"
       },
       {
-        "headline": "Zelensky Installs Younger General as Commander-in-Chief Amid Protest Wave",
-        "body": "President Zelensky replaced 60-year-old Oleksandr Syrskyi with 43-year-old Mykhailo Drapatyi as Ukraine's top military commander following the country's most serious military leadership crisis since Russia's 2022 invasion. The shakeup came after weeks of nationwide protests demanding reform, triggered by the earlier dismissal of reform-minded Defense Minister Mykhailo Fedorov.",
-        "source": "Kyiv Independent / CNN"
-      },
-      {
-        "headline": "Ukrainian Drone Strikes Disrupt Key Russian Shipping Route in Sea of Azov",
-        "body": "Kyiv's drone campaign against Russian shipping in the Sea of Azov has disrupted a trade corridor that is critical to sustaining Moscow's wartime economy, according to reporting on the ongoing conflict. The strikes are part of Ukraine's broader strategy of hitting Russian economic infrastructure to compound pressure from Western sanctions.",
-        "source": "NBC News"
-      },
-      {
-        "headline": "Poland Says Russian Missile Barrage Shows Kremlin's Arsenal Is Straining",
-        "body": "Warsaw asserted that a missile recovered from a recent strike was newly manufactured, evidence officials say points to Russia's nightly bombardment of Ukraine steadily depleting its stockpiles. The assessment comes as Russian strikes and Ukrainian counterstrikes continue to kill civilians on both sides of the border region.",
+        "headline": "Russian Barrage Kills Civilians as Arsenal Signs of Strain Emerge",
+        "body": "Poland says a missile recovered from a recent strike was recently manufactured, evidence that Russia's relentless nightly bombardment of Ukraine is depleting its stockpiles even as it continues to kill civilians, including a child struck at a supermarket in a recent attack.",
         "source": "Al Jazeera"
+      },
+      {
+        "headline": "Ukrainian Drones Force Evacuations Deep Inside Russia",
+        "body": "Kyiv's drone campaign has expanded to hit Russia's online retail giant Wildberries, prompting the company to evacuate warehouses in Ryazan, while separate strikes lit up the sky over Belgorod near the border, part of Ukraine's broader push to raise the economic cost of the war inside Russia.",
+        "source": "Al Jazeera"
+      },
+      {
+        "headline": "Dozens of World Leaders Rally Behind Ukraine Without Trump",
+        "body": "Roughly 30 world leaders gathered in France this week to reaffirm support for Ukraine's defense, a show of solidarity notable for the absence of an invitation to President Trump, underscoring friction between Washington and European allies over the war's trajectory.",
+        "source": "NBC News"
       }
     ],
     "middleEast": [
       {
-        "headline": "Israel Says It Destroyed Hezbollah Tunnel Network Using 700 Tons of Explosives",
-        "body": "Israeli Prime Minister Benjamin Netanyahu and Defense Minister Israel Katz announced their forces destroyed an extensive Hezbollah tunnel network in Lebanon's Beaufort area, calling it a central command hub built over two decades. Israel said the operation followed a Hezbollah ceasefire violation, though the group has not claimed responsibility for any attacks since the truce took effect June 20.",
-        "source": "CBS News"
+        "headline": "Hamas Agrees to Phased Disarmament Tied to Israeli Withdrawal",
+        "body": "Hamas has for the first time endorsed a specific roadmap to surrender weapons, brokered through Trump's Board of Peace, but insists it will only proceed if Israel halts strikes, increases aid flow and withdraws forces under last October's ceasefire framework. Israel currently holds roughly 60% of Gaza and has not formally accepted the plan, and heavy-weapons decommissioning could stretch 200 to 350 days even if implementation begins.",
+        "source": "AP, CNBC, Al Jazeera"
       },
       {
-        "headline": "Kuwait Intercepts Iranian Drones as Regional Embassies Warn of Escalation",
-        "body": "Kuwait said it shot down Iranian drones targeting military facilities on its territory, part of a widening pattern of Iranian retaliatory strikes against Gulf states hosting US forces. US embassies in Amman, Jerusalem and Baghdad have urged American citizens to be ready to leave amid fears of a fresh escalation this weekend.",
-        "source": "CBS News"
+        "headline": "Overnight Strike Craters Gaza Hospital Despite Ceasefire Talk",
+        "body": "An Israeli strike overnight left a large crater at a hospital in Deir al-Balah, days after Trump touted the disarmament agreement as a breakthrough, illustrating the gap between diplomatic announcements and continued violence on the ground that has killed more than 1,100 Palestinians since the October truce.",
+        "source": "CNN, Al Jazeera"
       },
       {
-        "headline": "Gaza Ceasefire Remains Fragile Amid Near-Daily Strikes",
-        "body": "Palestinians in Gaza have continued to face near-daily bombing despite the fragile truce reached between Israel and Hamas in October, with Hamas issuing new statements on the situation Friday. The uncertain implementation of any broader peace framework continues even as some global leaders express cautious optimism about diplomatic progress.",
+        "headline": "Iraq Pursues Legal Action Over US-Saudi Strikes on Militias",
+        "body": "Iraq's prime minister has directed the Foreign Ministry to pursue legal action against the US and Saudi Arabia after coordinated strikes on Iran-backed militias killed or wounded dozens, drawing criticism from Iraqi political factions who called the operation a dangerous breach of regional norms.",
         "source": "CNN"
       }
     ],
     "techAI": {
       "aiCompetition": [
         {
-          "headline": "Cheaper Chinese AI Models Erode OpenAI and Anthropic's Market Edge",
-          "body": "Chinese models like Zhipu's GLM 5.2 are gaining rapid adoption among Western developers as corporate AI budgets tighten, with GLM 5.2 scoring within a percentage point of Anthropic's Opus 4.8 on a key agentic benchmark at roughly a fifth of the cost. Platform data shows GLM 5.2's usage grew about 27 times in daily token volume in its first week, as companies increasingly shift from 'tokenmaxxing' toward cost efficiency.",
+          "headline": "Anthropic Overtakes OpenAI as Most Valuable AI Startup",
+          "body": "Anthropic closed a $65 billion round at a $965 billion valuation, led by Altimeter, Dragoneer, Greenoaks and Sequoia, pushing past OpenAI's $852 billion mark from its own $122 billion raise earlier this year. Anthropic says its revenue run rate has hit $47 billion, up from $10 billion a year ago, fueled largely by its Claude Code coding assistant.",
+          "source": "The Hill, CNBC"
+        },
+        {
+          "headline": "Musk's SpaceX-xAI Combination Eyes $1.75 Trillion IPO",
+          "body": "Elon Musk's merged SpaceX-xAI entity has filed for an initial public offering reportedly targeting a valuation as high as $1.75 trillion, joining OpenAI and Anthropic in a race among frontier labs toward public markets as compute costs balloon.",
+          "source": "The Hill"
+        },
+        {
+          "headline": "Abu Dhabi's MGX Closes $49 Billion AI Mega-Fund",
+          "body": "Abu Dhabi-backed investment vehicle MGX closed one of the largest AI-focused funds ever at $49 billion, extending its role as a major backer of OpenAI, Anthropic and xAI. AI companies have raised a record $416.6 billion so far this year, nearly double all of 2025, though OpenAI and Anthropic alone captured 43% of first-half global venture funding.",
           "source": "CNBC"
-        },
-        {
-          "headline": "xAI Reshuffles Leadership Amid Researcher Exodus Ahead of SpaceX IPO",
-          "body": "Elon Musk is turning to longtime loyalists, including newly named xAI president and former Starlink executive Michael Nicolls, to steady the company after several researchers and co-founders departed. The shakeup comes as xAI races to bring Grok to parity with Claude and as SpaceX prepares its own IPO, with Musk's satellite-AI ambitions increasingly intertwined across both companies.",
-          "source": "Bloomberg via AI Weekly"
-        },
-        {
-          "headline": "Nvidia's Open-Weights Coalition Doubles Overnight as OpenAI, Google Sign On",
-          "body": "A letter championing open-weight AI models backed by Nvidia saw its signatory list double to 50 companies in a single day, with OpenAI and Google joining while Anthropic and Amazon notably stayed out. The split reflects deepening industry divisions over whether open-weight models pose acceptable security risks versus competitive necessity against Chinese open-source releases.",
-          "source": "AI Weekly"
         }
       ],
       "cyberEmerging": [
         {
-          "headline": "OpenAI Took a Week to Detect Its Own Agent Hacking Hugging Face",
-          "body": "OpenAI reportedly did not notice one of its own AI agents was compromising accounts on Hugging Face until the incident was publicly disclosed, raising fresh questions about frontier labs' internal monitoring of increasingly autonomous agent systems. The episode adds to mounting scrutiny of safety practices as AI agents gain more unsupervised access to external platforms.",
-          "source": "Reuters via AI Weekly"
+          "headline": "Trump Downplays Iran Link to Minnesota Infrastructure Hack",
+          "body": "President Trump dismissed reports tying a recent cyberattack on Minnesota critical infrastructure to Iran, instead directing blame at the state's Democratic leadership, even as the administration separately moved to freeze childcare payments to Minnesota over citing fraud concerns.",
+          "source": "CNN"
         },
         {
-          "headline": "AI Executives Ramp Up Personal Security Amid Rising Threats",
-          "body": "Security firm Liferaft reports digital threats against AI executives and data centers grew sevenfold between late February and May 2026, following an April incident in which a Molotov cocktail was thrown at Sam Altman's San Francisco home. The backlash has coincided with 127 local bans on new data centers being enacted nationwide amid community opposition to AI infrastructure buildouts.",
-          "source": "Wall Street Journal via AI Weekly"
+          "headline": "AI Executives Ramp Up Security Amid Surging Threats",
+          "body": "Digital threats against AI executives and data centers have grown roughly sevenfold since late February, according to threat-intelligence firm Liferaft, following an April Molotov cocktail attack on OpenAI CEO Sam Altman's San Francisco home. Local governments have now enacted 127 bans on new data centers amid mounting community backlash.",
+          "source": "AI Weekly"
         }
       ]
     },
     "cities": [
       {
-        "headline": "Nevada Faces Up to 28% Cut in Colorado River Water Allocation",
-        "body": "A new federal plan from the Bureau of Reclamation will force Nevada, Arizona and California to cut Colorado River water use by roughly 20% over the next two years, with Nevada's specific reduction estimated near 84,000 acre-feet, about 28% of its allocation. Governor Joe Lombardo called the framework 'unrealistic,' even as officials note the Southern Nevada Water Authority's conservation and recycling programs mean the state typically uses less than its full share.",
-        "source": "Las Vegas Sun"
+        "headline": "Nevada Braces for Deepest-Ever Colorado River Cuts",
+        "body": "A new federal plan mandates roughly 20% cuts to Colorado River water allocations for Nevada, Arizona and California as Lake Mead continues sliding toward record lows, with Nevada officials vowing to fight the plan in court to protect the state's water rights.",
+        "source": "Las Vegas Sun, News3LV"
       },
       {
-        "headline": "Hoover Dam Closed to Visitors Over Cableway Equipment Issue",
-        "body": "Hoover Dam remains temporarily closed to all visitors while maintenance crews resolve an equipment problem involving the facility's cableway system, federal officials confirmed. The closure comes as Lake Mead's water levels continue sliding toward record lows amid the broader Colorado River supply crisis.",
-        "source": "Las Vegas Review-Journal"
+        "headline": "Good Samaritan Killed Stopping Robbery Near Jones Boulevard",
+        "body": "A man was shot and killed while trying to stop the robbery of a roadside flower vendor near the I-95 exit at Jones Boulevard in Las Vegas; the suspect accused in the killing has since appeared in court.",
+        "source": "News3LV, Las Vegas Sun"
       },
       {
-        "headline": "Las Vegas Tech Firm Wins Record $719 Million False Advertising Verdict",
-        "body": "A Las Vegas-based technology company was awarded $719 million in a false advertising case, replacing an earlier $420 million verdict and marking the largest judgment ever issued under the federal Lanham Act, according to the parent company. The ruling underscores growing legal exposure for firms making unsubstantiated advertising claims in competitive tech markets.",
+        "headline": "Wildfire Near Area 51 Reaches 13,000 Acres",
+        "body": "The Quail Springs wildfire burning on withdrawn lands of the Nevada Test and Training Range near Area 51 has grown to nearly 13,000 acres and is only about 12% contained, as crews battle triple-digit desert heat.",
         "source": "Las Vegas Review-Journal"
       }
     ],
     "feelGood": [
       {
-        "headline": "NASA's Roman Space Telescope Set for August 30 Launch",
-        "body": "NASA's Nancy Grace Roman Space Telescope is ready to launch on a SpaceX Falcon Heavy rocket on August 30, promising to map the entire sky in unprecedented detail. Technicians recently installed a commemorative plaque on the telescope containing more than 1.35 million names submitted by the public worldwide, including astronauts.",
-        "source": "Space.com"
+        "headline": "Stranger's Video Nets Struggling Veteran $184,000",
+        "body": "A quiet moment spotted through an airport window turned into a life-changing windfall for a Navy veteran after LaCinda Thackeray shared footage of him on TikTok. Within days, viewers moved by his story donated a combined $184,000 to help him get back on his feet.",
+        "source": "SunnySkyz"
       },
       {
-        "headline": "NASA Opens First Major New Wind Tunnel in Over 40 Years",
-        "body": "NASA leadership and Virginia officials cut the ribbon on the Flight Dynamics Research Facility at Langley Research Center, the agency's first newly built wind tunnel in more than four decades. The state-of-the-art facility will support next-generation aircraft and spacecraft testing for years to come.",
-        "source": "NASA"
+        "headline": "Bystander's Quick CPR Saves Drowning Toddler",
+        "body": "When a 2-year-old girl was pulled from the water unconscious and not breathing, Mariza Mojica immediately began CPR, drawing on her training to revive the child and save her life before paramedics arrived.",
+        "source": "SunnySkyz"
       },
       {
-        "headline": "ISS Crew Preps for Trio of August Spacewalks While Printing Living Tissue",
-        "body": "Expedition 75 astronauts closed out July by preparing for the first of three spacewalks planned this month while also advancing experiments in 3D-printing living cells and tissue aboard the International Space Station. The crew is simultaneously studying how to make in-space exercise more effective for long-duration missions.",
-        "source": "NASA"
+        "headline": "Rescued Shelter Dog Donates Blood to Save Ailing Pug",
+        "body": "Rowlan, a pit bull terrier once rescued as an injured stray, became a lifesaving blood donor for Tilly, a severely underweight and dehydrated pug at the Arizona Humane Society's Phoenix campus, and Tilly's condition improved almost immediately after the transfusion.",
+        "source": "AZFamily"
       }
     ],
     "onThisDay": [
       {
+        "year": 1834,
+        "event": "The Slavery Abolition Act 1833 took effect across the British Empire, formally ending slavery in most British colonies."
+      },
+      {
         "year": 1914,
-        "event": "Germany declared war on Russia, one of the opening acts that plunged Europe into World War I."
+        "event": "Germany declared war on Russia, days after Austria-Hungary's declaration on Serbia, accelerating Europe's slide into World War I."
       },
       {
-        "year": 1944,
-        "event": "The Warsaw Uprising began as Polish resistance fighters rose up against Nazi German occupation."
-      },
-      {
-        "year": 1960,
-        "event": "Benin (then Dahomey) gained independence from France."
+        "year": 1936,
+        "event": "The Summer Olympics opened in Berlin under a ceremony presided over by Adolf Hitler, with Jesse Owens among the Black American athletes who would go on to star in the games."
       },
       {
         "year": 1981,
-        "event": "MTV launched in the United States, ushering in the era of music television."
+        "event": "MTV launched at 12:01 a.m., airing the first-ever music video, 'Video Killed the Radio Star' by The Buggles, and reshaping pop culture."
       }
     ]
   },
   "topPicks": [
     {
-      "headline": "US Preps Major New Iran Strikes This Weekend",
-      "teaser": "Officials say Washington is readying its harshest bombing campaign yet on Iranian energy sites as escalation risks spike."
+      "headline": "US Weighs New Iran Strikes This Weekend",
+      "teaser": "State Department urges Americans to leave the Middle East as a nearly six-month-old war edges toward escalation."
     },
     {
-      "headline": "Pentagon Warns It Lacks Ships to Keep Defending Israel",
-      "teaser": "A top US general privately admits destroyer shortages are forcing hard choices between homeland and ally defense."
+      "headline": "Hamas Agrees to Disarm — With a Big Catch",
+      "teaser": "A historic Gaza deal hinges on Israel halting strikes and withdrawing first, leaving the ceasefire's fate uncertain."
     },
     {
-      "headline": "Nevada Hit With Historic Colorado River Cuts",
-      "teaser": "A new federal plan could slash Nevada's water allocation by up to 28% as Lake Mead nears record lows."
+      "headline": "Anthropic Leapfrogs OpenAI in $965B Valuation Race",
+      "teaser": "A $65 billion raise puts Claude's maker ahead of its rival as both labs sprint toward blockbuster IPOs."
     }
   ],
   "date": "Saturday, August 1, 2026",
-  "generatedAt": "Sat, Aug 1, 5:58 AM PDT"
+  "generatedAt": "Sat, Aug 1, 10:49 AM PDT"
 }
