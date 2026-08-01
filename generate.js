@@ -63,8 +63,12 @@ dates). Cover these sections and item counts:
 - topPicks: the 3 HIGHEST-IMPACT stories of the day, each with a one-sentence teaser (max ~20 words)
   written to make a reader want to click. Editorial picks across all sections.
 
-Each story object MUST have exactly: "headline", "body", "source". onThisDay items MUST have exactly:
-"year", "event". topPicks items MUST have exactly: "headline", "teaser".
+Each story object MUST have exactly: "headline", "body", "source", "url" — where "url" is
+the direct link to the specific article you're summarizing (prefer the exact article page;
+if you're unsure of the exact link, use the outlet's homepage rather than guessing). Only
+include URLs you actually encountered via web search — never invent or guess a URL.
+onThisDay items MUST have exactly: "year", "event". topPicks items MUST have exactly:
+"headline", "teaser".
 
 FORMATTING RULES — the output MUST be valid JSON, so follow these exactly:
 - Return ONLY a single JSON object. No markdown fences, no preamble, no commentary.
@@ -72,9 +76,9 @@ FORMATTING RULES — the output MUST be valid JSON, so follow these exactly:
 - NEVER use the double-quote character (") inside any text value. If you need to quote a
   word or phrase, use single quotes ('). Double quotes may only be JSON's own string delimiters.
 
-Return the JSON in exactly this shape:
+Return the JSON in exactly this shape (each story object has headline, body, source, url):
 {
-  "breaking": { "headline": "", "body": "", "source": "" },
+  "breaking": { "headline": "", "body": "", "source": "", "url": "" },
   "tabs": {
     "defense": [], "us": [], "pacific": [], "europe": [], "middleEast": [],
     "techAI": { "aiCompetition": [], "cyberEmerging": [] },
