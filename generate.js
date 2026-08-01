@@ -87,13 +87,17 @@ Return the JSON in exactly this shape:
 async function research() {
   const messages = [{ role: "user", content: prompt }];
   const texts = [];
-  for (let i = 0; i < 12; i++) {
+  let lastStop = null;
+  // Loop ceiling (25) sits comfortably above the search budget (max_uses 12), so the
+  // model always finishes searching and writes its JSON before the loop ends.
+  for (let i = 0; i < 25; i++) {
     const resp = await client.messages.create({
       model: MODEL,
       max_tokens: 16000,
-      tools: [{ type: "web_search_20250305", name: "web_search", max_uses: 15 }],
+      tools: [{ type: "web_search_20250305", name: "web_search", max_uses: 12 }],
       messages,
     });
+    lastStop = resp.stop_reason;
     for (const b of resp.content) if (b.type === "text") texts.push(b.text);
     if (resp.stop_reason === "pause_turn") {
       // model paused mid-turn (still searching): feed its progress back and continue
@@ -102,7 +106,11 @@ async function research() {
     }
     break; // end_turn (or max_tokens) — the turn is complete
   }
-  return texts.join("\n");
+  const out = texts.join("\n");
+  if (!out.trim()) {
+    console.error(`No text returned. Last stop_reason: ${lastStop}. The model may still have been searching when the loop ended.`);
+  }
+  return out;
 }
 
 const rawText = await research();
