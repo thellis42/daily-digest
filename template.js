@@ -54,7 +54,10 @@ export function renderPage({ digest, navDates, currentKey, pageUrl }) {
   .card-head { font-weight:700; color:#f1f5f9; font-size:15px; line-height:1.4; margin-bottom:8px; }
   .card-body { color:#94a3b8; font-size:13.5px; line-height:1.65; }
   .toggle { margin-top:8px; background:none; border:none; font-size:12px; cursor:pointer; padding:0; font-weight:600; font-family:inherit; }
-  .card-src { margin-top:10px; display:inline-block; background:rgba(255,255,255,.06); border-radius:4px; padding:2px 8px; font-size:11px; color:#64748b; font-weight:600; letter-spacing:.3px; }
+  .card-src { display:inline-block; background:rgba(255,255,255,.06); border-radius:4px; padding:2px 8px; font-size:11px; color:#64748b; font-weight:600; letter-spacing:.3px; }
+  .card-footer { margin-top:10px; display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+  .read-link { font-size:12px; font-weight:700; text-decoration:none; white-space:nowrap; }
+  .read-link:hover { text-decoration:underline; }
   .section-head { font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; margin-bottom:10px; margin-top:18px; padding-bottom:6px; }
   .note { background:#1e293b; border-radius:10px; padding:14px 18px; color:#64748b; font-size:13px; margin-top:4px; }
   .note strong { color:#94a3b8; }
@@ -137,11 +140,15 @@ function copyShare(){
 function cardHTML(story, accent){
   const long = story.body.length > 160;
   const preview = long ? story.body.slice(0,160).replace(/\\s+$/,"") + "…" : story.body;
+  const hasUrl = story.url && /^https?:\\/\\//.test(story.url);
+  const link = hasUrl
+    ? '<a class="read-link" style="color:'+accent+'" href="'+esc(story.url)+'" target="_blank" rel="noopener noreferrer">Read full article →</a>'
+    : '';
   return '<div class="card" style="border-left:3px solid '+accent+'">'
     + '<div class="card-head">'+esc(story.headline)+'</div>'
     + '<div class="card-body" data-full="'+esc(story.body)+'" data-preview="'+esc(preview)+'" data-expanded="false">'+esc(preview)+'</div>'
     + (long ? '<button class="toggle" style="color:'+accent+'" onclick="toggleCard(this)">Read more ▼</button>' : '')
-    + '<div class="card-src">'+esc(story.source)+'</div></div>';
+    + '<div class="card-footer"><div class="card-src">'+esc(story.source)+'</div>'+link+'</div></div>';
 }
 function toggleCard(btn){
   const body = btn.previousElementSibling;
