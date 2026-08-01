@@ -1,0 +1,42 @@
+name: Daily Digest
+
+on:
+  schedule:
+    # 6:30am Las Vegas. GitHub cron is UTC-only, so we fire at BOTH possible
+    # times and the script exits unless it's actually 6am Pacific.
+    - cron: "30 13 * * *"   # 06:30 during Pacific Daylight Time (summer)
+    - cron: "30 14 * * *"   # 06:30 during Pacific Standard Time (winter)
+  workflow_dispatch: {}      # manual run — ignores the 6am gate
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install
+
+      - name: Generate digest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SITE_URL: https://YOUR-SITE.netlify.app          # ← set to your Netlify URL
+          FORCE: ${{ github.event_name == 'workflow_dispatch' }}
+          # DIGEST_MODEL: claude-opus-4-8                   # richer writing, higher cost
+          # --- optional email (also add these as repo secrets) ---
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          # EMAIL_FROM: "Daily Digest <digest@yourdomain.com>"
+        run: node generate.js
+
+      - name: Commit & push
+        run: |
+          git config user.name  "digest-bot"
+          git config user.email "digest-bot@users.noreply.github.com"
+          git add -A
+          git commit -m "Digest ${{ github.run_id }}" || echo "No changes to commit"
+          git push
