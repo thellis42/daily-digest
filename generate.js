@@ -10,21 +10,13 @@ const OUT = "public";
 const ARCHIVE = path.join(OUT, "archive");
 const DATA = "data";
 const SITE_URL = (process.env.SITE_URL || "https://YOUR-SITE.netlify.app").replace(/\/+$/, "");
-const FORCE = process.env.FORCE === "true"; // manual runs set this
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const now = new Date();
 
-// ---- only proceed at 6am Pacific (unless a manual/forced run) ----
-const pacHour = Number(
-  new Intl.DateTimeFormat("en-GB", {
-    timeZone: "America/Los_Angeles", hour: "2-digit", hourCycle: "h23",
-  }).format(now)
-);
-if (!FORCE && pacHour !== 6) {
-  console.log(`Not 6am in Las Vegas (currently hour ${pacHour}). Skipping this run.`);
-  process.exit(0);
-}
+// This script builds every time it runs. Scheduling (twice daily) lives in the two
+// cron entries in .github/workflows/daily.yml. A later run on the same Pacific day
+// overwrites — i.e. refreshes — that day's page and its archive entry.
 
 // ---- dates & timestamp (Pacific) ----
 const humanDate = new Intl.DateTimeFormat("en-US", {
@@ -39,7 +31,7 @@ const generatedAt = new Intl.DateTimeFormat("en-US", {
   timeZone: "America/Los_Angeles",
   weekday: "short", month: "short", day: "numeric",
   hour: "numeric", minute: "2-digit", timeZoneName: "short",
-}).format(now); // "Tue, Jul 28, 6:30 AM PDT"
+}).format(now); // "Tue, Jul 28, 8:00 AM PDT"
 
 // ---- the editorial brief ----
 const prompt = `You are the editor of a personal daily news digest for a reader in Las Vegas with strong
@@ -127,7 +119,7 @@ try {
 digest.date = humanDate;
 digest.generatedAt = generatedAt;
 
-// ---- persist today's data ----
+// ---- persist today's data (source of truth) ----
 fs.mkdirSync(DATA, { recursive: true });
 fs.writeFileSync(path.join(DATA, `${dateKey}.json`), JSON.stringify(digest, null, 2));
 
