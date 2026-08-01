@@ -67,7 +67,13 @@ dates). Cover these sections and item counts:
 Each story object MUST have exactly: "headline", "body", "source". onThisDay items MUST have exactly:
 "year", "event". topPicks items MUST have exactly: "headline", "teaser".
 
-Return ONLY a single JSON object, no markdown fences, no preamble, in exactly this shape:
+FORMATTING RULES — the output MUST be valid JSON, so follow these exactly:
+- Return ONLY a single JSON object. No markdown fences, no preamble, no commentary.
+- Do NOT include citation markup of any kind: no <cite> tags, no index numbers, no footnotes.
+- NEVER use the double-quote character (") inside any text value. If you need to quote a
+  word or phrase, use single quotes ('). Double quotes may only be JSON's own string delimiters.
+
+Return the JSON in exactly this shape:
 {
   "breaking": { "headline": "", "body": "", "source": "" },
   "tabs": {
@@ -103,7 +109,8 @@ async function research() {
 const rawText = await research();
 
 function extractJSON(s) {
-  const t = s.replace(/```json/gi, "```").replace(/```/g, "").trim();
+  let t = s.replace(/```json/gi, "```").replace(/```/g, "").trim();
+  t = t.replace(/<\/?cite[^>]*>/gi, ""); // strip any citation tags the model added
   const first = t.indexOf("{"), last = t.lastIndexOf("}");
   if (first === -1 || last === -1) throw new Error("No JSON found in model output");
   return JSON.parse(t.slice(first, last + 1));
