@@ -51,7 +51,14 @@ dates). Cover these sections and item counts:
 - techAI.aiCompetition: 3 items (frontier models, labs, funding)
 - techAI.cyberEmerging: 2 items (cyber, AI policy, emerging tech)
 - cities: 3 items (Las Vegas / Nevada local news)
-- feelGood: 3 items (science, space, uplifting)
+- feelGood: 3 items — genuine acts-of-humanity stories that leave the reader feeling
+  'humanity remains good.' Prioritize: charitable giving (someone donates a large sum,
+  a community rallies for a stranger), humanitarian efforts (including US military or
+  service members doing good — disaster relief, rescues, aid), a long-held dream coming
+  true for someone facing illness or hardship, acts of generosity, kindness, or rescue.
+  Avoid generic science/space/tech items here unless they directly help people in a
+  moving, human way. Each should be a real, recent, specific story with named people or
+  organizations where possible.
 - onThisDay: 4 real historical events that occurred on this calendar date
 - topPicks: the 3 HIGHEST-IMPACT stories of the day, each with a one-sentence teaser (max ~20 words)
   written to make a reader want to click. Editorial picks across all sections.
