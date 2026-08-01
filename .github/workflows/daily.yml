@@ -24,7 +24,7 @@ jobs:
       - name: Generate digest
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          SITE_URL: https://YOUR-SITE.netlify.app          # ← set to your Netlify URL
+          SITE_URL: https://ws-daily-digest.netlify.app          # ← set to your Netlify URL
           FORCE: ${{ github.event_name == 'workflow_dispatch' }}
           # DIGEST_MODEL: claude-opus-4-8                   # richer writing, higher cost
           # --- optional email (also add these as repo secrets) ---
