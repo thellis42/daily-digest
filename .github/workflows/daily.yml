@@ -4,7 +4,7 @@ on:
   schedule:
     # Two builds per day at fixed UTC times. The later run refreshes the same
     # day's page with newer news. (GitHub cron is UTC-only and may run late.)
-    - cron: "0 15 * * *"   # 15:00 UTC — ~08:00 PDT / ~07:00 PST (morning)
+    - cron: "0 13 * * *"   # 13:00 UTC — ~07:00 PDT / ~06:00 PST (morning)
     - cron: "0 23 * * *"   # 23:00 UTC — ~16:00 PDT / ~15:00 PST (afternoon refresh)
   workflow_dispatch: {}      # manual run — builds immediately
 
