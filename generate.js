@@ -4,13 +4,13 @@ import Anthropic from "@anthropic-ai/sdk";
 import { renderPage } from "./template.js";
 
 // ---- config ----
-const MODEL = process.env.DIGEST_MODEL || "claude-sonnet-5"; // or "claude-opus-4-8" for richer writing
+const MODEL = process.env.DIGEST_MODEL || "claude-sonnet-5"; // or "claude-opus-4-8"
 const KEEP_DAYS = 7;
 const OUT = "public";
 const ARCHIVE = path.join(OUT, "archive");
 const DATA = "data";
 const SITE_URL = (process.env.SITE_URL || "https://YOUR-SITE.netlify.app").replace(/\/+$/, "");
-const MAX_SEARCHES = Number(process.env.MAX_SEARCHES || 6); // per grouped call — lower = cheaper
+const MAX_SEARCHES = Number(process.env.MAX_SEARCHES || 5); // per grouped call — lower = cheaper
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const now = new Date();
@@ -41,7 +41,6 @@ FORMATTING RULES — the output MUST be valid JSON:
 - Return ONLY the JSON object described. No markdown fences, no preamble, no commentary.
 - Do NOT include citation markup: no <cite> tags, no index numbers, no footnotes.
 - NEVER use the double-quote character (") inside any text value; use single quotes (') for quotations.
-  Double quotes may only be JSON's own string delimiters.
 - Each story object MUST have exactly: "headline", "body", "source", "url" — where "url" is the article
   link from your search results (if unsure, use the outlet homepage; never invent a URL).`;
 
@@ -66,92 +65,129 @@ async function ask(prompt, { search = true } = {}) {
       messages,
     });
     for (const b of resp.content) if (b.type === "text") texts.push(b.text);
-    if (resp.stop_reason === "pause_turn") {
-      messages.push({ role: "assistant", content: resp.content });
-      continue;
-    }
+    if (resp.stop_reason === "pause_turn") { messages.push({ role: "assistant", content: resp.content }); continue; }
     break;
   }
   return extractJSON(texts.join(""));
 }
 
-// ---- assemble the digest one group at a time ----
+// ---- digest skeleton ----
 const digest = {
   date: humanDate,
   generatedAt,
   breaking: null,
   tabs: {
-    defense: [], us: [], pacific: [], europe: [], middleEast: [],
+    defense: { defense: [], acquisitions: [] },
+    us: [],
+    pacific: { pacificCommand: [], pacingThreat: [] },
+    europe: { ukraineRussia: [], europe: [] },
+    middleEast: [],
     techAI: { aiCompetition: [], cyberEmerging: [] },
-    cities: [], feelGood: [], onThisDay: [],
+    cities: { lasVegas: [], nellis: [] },
+    feelGood: [],
+    onThisDay: [],
   },
   topPicks: [],
 };
 
-console.log("Fetching: breaking + defense…");
+// ---- Call 1: breaking + US Defense ----
+console.log("Fetching: breaking + US Defense…");
 const g1 = await ask(`${persona}
-Return JSON with two keys:
-- "breaking": ONE object — the single biggest news story of the day (any topic).
-- "defense": array of exactly 5 defense / military stories.
-Shape: {"breaking": { }, "defense": [ ]}
+Return JSON with these keys:
+- "breaking": ONE object — the single most important news story of the day (any topic). For its "url",
+  include a direct link to the SPECIFIC article ONLY if you have one from your search results; if you only
+  have a homepage or section link, set "url" to an empty string "".
+- "defense": array of 3 US Defense stories — 2 directly about US military updates and 1 about a coalition
+  (allied / NATO) update.
+- "acquisitions": array of 2 stories directly about US military acquisitions (programs, contracts, procurement).
+Keep "defense" and "acquisitions" limited to US and NATO/allied topics; push anything centered on other
+nations (China, Russia, etc.) to their own regions — do not place them here.
+Shape: {"breaking": { }, "defense": [ ], "acquisitions": [ ]}
 ${RULES}`);
 digest.breaking = g1.breaking;
-digest.tabs.defense = g1.defense;
+digest.tabs.defense = { defense: g1.defense || [], acquisitions: g1.acquisitions || [] };
 
+const EXCLUDE = digest.breaking && digest.breaking.headline
+  ? `Do NOT include the day's already-covered top story: '${digest.breaking.headline}'.`
+  : "";
+
+// ---- Call 2: US ----
 console.log("Fetching: US…");
 const g2 = await ask(`${persona}
+${EXCLUDE}
 Return JSON: {"us": [ exactly 4 US politics / economy / courts stories ]}
 ${RULES}`);
 digest.tabs.us = g2.us;
 
+// ---- Call 3: Pacific ----
 console.log("Fetching: Pacific…");
 const g3 = await ask(`${persona}
-Return JSON: {"pacific": [ exactly 5 China / Taiwan / Korea / Japan / Indo-Pacific stories ]}
+${EXCLUDE}
+Return JSON with two keys:
+- "pacificCommand": array of 3 stories about countries in the Pacific region (Japan, Korea, the Philippines,
+  Australia, India, other Indo-Pacific nations). You MAY include other nations' actions toward China, but do
+  NOT make any of these 3 directly about China/PRC's own actions.
+- "pacingThreat": array of 3 stories — 2 specifically about China/PRC actions or notable open-source
+  intelligence on the PLA, and 1 about Taiwan.
+Shape: {"pacificCommand": [ ], "pacingThreat": [ ]}
 ${RULES}`);
-digest.tabs.pacific = g3.pacific;
+digest.tabs.pacific = { pacificCommand: g3.pacificCommand || [], pacingThreat: g3.pacingThreat || [] };
 
+// ---- Call 4: Europe + Middle East ----
 console.log("Fetching: Europe + Middle East…");
 const g4 = await ask(`${persona}
-Return JSON with two keys:
-- "europe": array of exactly 4 Europe stories (including Russia / Ukraine).
-- "middleEast": array of exactly 3 Middle East stories.
-Shape: {"europe": [ ], "middleEast": [ ]}
+${EXCLUDE}
+Return JSON with three keys:
+- "ukraineRussia": array of 2 stories directly about the Russia-Ukraine war.
+- "europe": array of 2 stories — 1 about NATO defense and 1 about the single biggest current issue/topic
+  facing European countries (non-defense is fine).
+- "middleEast": array of 3 Middle East stories.
+Shape: {"ukraineRussia": [ ], "europe": [ ], "middleEast": [ ]}
 ${RULES}`);
-digest.tabs.europe = g4.europe;
-digest.tabs.middleEast = g4.middleEast;
+digest.tabs.europe = { ukraineRussia: g4.ukraineRussia || [], europe: g4.europe || [] };
+digest.tabs.middleEast = g4.middleEast || [];
 
+// ---- Call 5: Tech & AI ----
 console.log("Fetching: Tech & AI…");
 const g5 = await ask(`${persona}
+${EXCLUDE}
 Return JSON with two keys:
-- "aiCompetition": array of exactly 3 frontier-AI / labs / funding stories.
-- "cyberEmerging": array of exactly 2 cyber / AI-policy / emerging-tech stories.
+- "aiCompetition": array of 2 frontier-AI / labs / funding stories.
+- "cyberEmerging": array of 2 cyber / AI-policy / emerging-tech stories.
 Shape: {"aiCompetition": [ ], "cyberEmerging": [ ]}
 ${RULES}`);
-digest.tabs.techAI.aiCompetition = g5.aiCompetition;
-digest.tabs.techAI.cyberEmerging = g5.cyberEmerging;
+digest.tabs.techAI.aiCompetition = g5.aiCompetition || [];
+digest.tabs.techAI.cyberEmerging = g5.cyberEmerging || [];
 
+// ---- Call 6: Las Vegas + Feel Good ----
 console.log("Fetching: Las Vegas + Feel Good…");
 const g6 = await ask(`${persona}
-Return JSON with two keys:
-- "cities": array of exactly 3 Las Vegas / Nevada local news stories.
-- "feelGood": array of exactly 3 genuine acts-of-humanity stories that leave the reader feeling 'humanity
-  remains good' — charitable giving (a large donation, a community rallying for a stranger), humanitarian
-  efforts (including US military or service members doing good — disaster relief, rescues, aid), a long-held
-  dream coming true for someone facing illness or hardship, or acts of generosity, kindness or rescue. Real,
+${EXCLUDE}
+Return JSON with three keys:
+- "lasVegas": array of 3 Las Vegas / Nevada local news stories.
+- "nellis": array of 1 story specifically about Nellis Air Force Base, Creech Air Force Base, or the Nevada
+  Test and Training Range (NTTR) — or notable military relations/activity in the Las Vegas area.
+- "feelGood": array of 3 genuine acts-of-humanity stories that leave the reader feeling 'humanity remains
+  good' — charitable giving (a large donation, a community rallying for a stranger), humanitarian efforts
+  (including US military or service members doing good — disaster relief, rescues, aid), a long-held dream
+  coming true for someone facing illness or hardship, or acts of generosity, kindness or rescue. Real,
   recent, specific stories with named people or organizations.
-Shape: {"cities": [ ], "feelGood": [ ]}
+Shape: {"lasVegas": [ ], "nellis": [ ], "feelGood": [ ]}
 ${RULES}`);
-digest.tabs.cities = g6.cities;
-digest.tabs.feelGood = g6.feelGood;
+digest.tabs.cities = { lasVegas: g6.lasVegas || [], nellis: g6.nellis || [] };
+digest.tabs.feelGood = g6.feelGood || [];
 
-// ---- final no-search call: On This Day + Top Picks (chosen from today's headlines) ----
+// ---- Call 7: On This Day + Top Picks (no search) ----
 console.log("Fetching: On This Day + Top Picks…");
 const allStories = [
   digest.breaking,
-  ...digest.tabs.defense, ...digest.tabs.us, ...digest.tabs.pacific,
-  ...digest.tabs.europe, ...digest.tabs.middleEast,
+  ...digest.tabs.defense.defense, ...digest.tabs.defense.acquisitions,
+  ...digest.tabs.us,
+  ...digest.tabs.pacific.pacificCommand, ...digest.tabs.pacific.pacingThreat,
+  ...digest.tabs.europe.ukraineRussia, ...digest.tabs.europe.europe, ...digest.tabs.middleEast,
   ...digest.tabs.techAI.aiCompetition, ...digest.tabs.techAI.cyberEmerging,
-  ...digest.tabs.cities, ...digest.tabs.feelGood,
+  ...digest.tabs.cities.lasVegas, ...digest.tabs.cities.nellis,
+  ...digest.tabs.feelGood,
 ].filter(Boolean);
 const headlines = allStories.map((s) => s.headline);
 
@@ -159,8 +195,7 @@ const extras = await ask(`Today is ${humanDate}. Return JSON with two keys:
 - "onThisDay": array of exactly 4 real historical events that happened on this calendar date, each
   {"year": "", "event": ""} (a one-sentence description).
 - "topPicks": choose the 3 highest-impact stories from the headline list below and write a one-sentence
-  teaser for each (max ~20 words, written to make a reader want to click), each {"headline": "", "teaser": ""}.
-  Use the headline text exactly as given.
+  teaser for each (max ~20 words), each {"headline": "", "teaser": ""}. Use the headline text exactly as given.
 Headlines:
 ${headlines.map((h) => "- " + h).join("\n")}
 
@@ -190,7 +225,7 @@ const navDates = keptKeys.map((key, i) => ({
   isNewest: i === 0,
 }));
 
-// ---- render every kept day (rebuild public/ from scratch) ----
+// ---- render every kept day ----
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(ARCHIVE, { recursive: true });
 for (const key of keptKeys) {
@@ -201,7 +236,7 @@ for (const key of keptKeys) {
   if (key === keptKeys[0]) fs.writeFileSync(path.join(OUT, "index.html"), html);
 }
 
-// ---- share blurb (link + 3 biggest) ----
+// ---- share blurb ----
 const picks = Array.isArray(digest.topPicks) ? digest.topPicks.slice(0, 3) : [];
 const share =
   `📰 Daily Digest — ${humanDate}\n${SITE_URL}\n\nToday's 3 biggest:\n` +
@@ -209,14 +244,11 @@ const share =
 fs.writeFileSync(path.join(OUT, "share.txt"), share);
 console.log("\n----- SHARE BLURB (copy me) -----\n" + share + "\n---------------------------------\n");
 
-// ---- optional: email the blurb via Resend ----
+// ---- optional email via Resend ----
 if (process.env.RESEND_API_KEY && process.env.EMAIL_TO) {
   const r = await fetch("https://api.resend.com/emails", {
     method: "POST",
-    headers: {
-      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-      "Content-Type": "application/json",
-    },
+    headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, "Content-Type": "application/json" },
     body: JSON.stringify({
       from: process.env.EMAIL_FROM || "Daily Digest <onboarding@resend.dev>",
       to: [process.env.EMAIL_TO],
