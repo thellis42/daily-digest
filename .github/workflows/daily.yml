@@ -2,11 +2,8 @@ name: Daily Digest
 
 on:
   schedule:
-    # Two builds per day at fixed UTC times. The later run refreshes the same
-    # day's page with newer news. (GitHub cron is UTC-only and may run late.)
-    - cron: "0 13 * * *"   # 13:00 UTC — ~07:00 PDT / ~06:00 PST (morning)
-    - cron: "0 23 * * *"   # 23:00 UTC — ~16:00 PDT / ~15:00 PST (afternoon refresh)
-  workflow_dispatch: {}      # manual run — builds immediately
+    - cron: "0 13 * * *"   # 13:00 UTC — ~06:00 PDT / ~05:00 PST (once daily)
+  workflow_dispatch: {}      # manual run — build anytime
 
 permissions:
   contents: write
@@ -24,9 +21,9 @@ jobs:
       - name: Generate digest
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          SITE_URL: https://https://ws-daily-digest.netlify.app/          # ← set to your Netlify URL
-          # DIGEST_MODEL: claude-opus-4-8                   # richer writing, higher cost
-          # --- optional email (also add these as repo secrets) ---
+          SITE_URL: https://YOUR-SITE.netlify.app          # ← set to your Netlify URL
+          # DIGEST_MODEL: claude-opus-4-8
+          # MAX_SEARCHES: "3"                               # even fewer searches = cheaper
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           # EMAIL_FROM: "Daily Digest <digest@yourdomain.com>"
