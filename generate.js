@@ -10,13 +10,10 @@ const OUT = "public";
 const ARCHIVE = path.join(OUT, "archive");
 const DATA = "data";
 const SITE_URL = (process.env.SITE_URL || "https://YOUR-SITE.netlify.app").replace(/\/+$/, "");
+const MAX_SEARCHES = Number(process.env.MAX_SEARCHES || 6); // per grouped call — lower = cheaper
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const now = new Date();
-
-// This script builds every time it runs. Scheduling (twice daily) lives in the two
-// cron entries in .github/workflows/daily.yml. A later run on the same Pacific day
-// overwrites — i.e. refreshes — that day's page and its archive entry.
 
 // ---- dates & timestamp (Pacific) ----
 const humanDate = new Intl.DateTimeFormat("en-US", {
@@ -26,120 +23,153 @@ const humanDate = new Intl.DateTimeFormat("en-US", {
 const dateKey = new Intl.DateTimeFormat("en-CA", {
   timeZone: "America/Los_Angeles",
   year: "numeric", month: "2-digit", day: "2-digit",
-}).format(now); // "2026-07-28"
+}).format(now);
 const generatedAt = new Intl.DateTimeFormat("en-US", {
   timeZone: "America/Los_Angeles",
   weekday: "short", month: "short", day: "numeric",
   hour: "numeric", minute: "2-digit", timeZoneName: "short",
-}).format(now); // "Tue, Jul 28, 8:00 AM PDT"
+}).format(now);
 
-// ---- the editorial brief ----
-const prompt = `You are the editor of a personal daily news digest for a reader in Las Vegas with strong
-interests in national security, defense policy, geopolitics, the Indo-Pacific, and frontier AI.
+// ---- shared prompt pieces ----
+const persona = `You are the editor of a daily news digest for a reader in Las Vegas interested in national
+security, defense, geopolitics, the Indo-Pacific, and frontier AI. Today is ${humanDate}. Use web search to
+find the most important developments from roughly the last 36 hours. Paraphrase in your own words — never
+copy sentences from sources. Each summary is 2-4 sentences, analytical and specific (names, numbers, dates).`;
 
-Today is ${humanDate}. Using web search, research the most important developments from roughly the
-last 36 hours and write concise, original summaries. PARAPHRASE everything in your own words — never
-copy sentences from sources. Keep each summary 2-4 sentences, analytical and specific (names, numbers,
-dates). Cover these sections and item counts:
+const RULES = `
+FORMATTING RULES — the output MUST be valid JSON:
+- Return ONLY the JSON object described. No markdown fences, no preamble, no commentary.
+- Do NOT include citation markup: no <cite> tags, no index numbers, no footnotes.
+- NEVER use the double-quote character (") inside any text value; use single quotes (') for quotations.
+  Double quotes may only be JSON's own string delimiters.
+- Each story object MUST have exactly: "headline", "body", "source", "url" — where "url" is the article
+  link from your search results (if unsure, use the outlet homepage; never invent a URL).`;
 
-- breaking: the single biggest story (1 item)
-- defense: 5 items
-- us: 4 items (US politics/economy/courts)
-- pacific: 5 items (China, Taiwan, Korea, Japan, Indo-Pacific)
-- europe: 4 items (incl. Russia/Ukraine)
-- middleEast: 3 items
-- techAI.aiCompetition: 3 items (frontier models, labs, funding)
-- techAI.cyberEmerging: 2 items (cyber, AI policy, emerging tech)
-- cities: 3 items (Las Vegas / Nevada local news)
-- feelGood: 3 items — genuine acts-of-humanity stories that leave the reader feeling
-  'humanity remains good.' Prioritize: charitable giving (someone donates a large sum,
-  a community rallies for a stranger), humanitarian efforts (including US military or
-  service members doing good — disaster relief, rescues, aid), a long-held dream coming
-  true for someone facing illness or hardship, acts of generosity, kindness, or rescue.
-  Avoid generic science/space/tech items here unless they directly help people in a
-  moving, human way. Each should be a real, recent, specific story with named people or
-  organizations where possible.
-- onThisDay: 4 real historical events that occurred on this calendar date
-- topPicks: the 3 HIGHEST-IMPACT stories of the day, each with a one-sentence teaser (max ~20 words)
-  written to make a reader want to click. Editorial picks across all sections.
-
-Each story object MUST have exactly: "headline", "body", "source", "url" — where "url" is
-the direct link to the specific article you're summarizing (prefer the exact article page;
-if you're unsure of the exact link, use the outlet's homepage rather than guessing). Only
-include URLs you actually encountered via web search — never invent or guess a URL.
-onThisDay items MUST have exactly: "year", "event". topPicks items MUST have exactly:
-"headline", "teaser".
-
-FORMATTING RULES — the output MUST be valid JSON, so follow these exactly:
-- Do ALL of your web searching FIRST. Once you begin writing the JSON object, output it
-  completely in a single pass, start to finish, without pausing to search again.
-- Do NOT run extra searches just to find or verify URLs. Use the link from the search
-  results where you found each story; if you don't have one, use that outlet's homepage.
-- Return ONLY a single JSON object. No markdown fences, no preamble, no commentary.
-- Do NOT include citation markup of any kind: no <cite> tags, no index numbers, no footnotes.
-- NEVER use the double-quote character (") inside any text value. If you need to quote a
-  word or phrase, use single quotes ('). Double quotes may only be JSON's own string delimiters.
-
-Return the JSON in exactly this shape (each story object has headline, body, source, url):
-{
-  "breaking": { "headline": "", "body": "", "source": "", "url": "" },
-  "tabs": {
-    "defense": [], "us": [], "pacific": [], "europe": [], "middleEast": [],
-    "techAI": { "aiCompetition": [], "cyberEmerging": [] },
-    "cities": [], "feelGood": [], "onThisDay": []
-  },
-  "topPicks": []
-}`;
-
-// ---- call the API (loop to handle web-search "pause_turn" continuations) ----
-async function research() {
-  const messages = [{ role: "user", content: prompt }];
-  const texts = [];
-  let lastStop = null;
-  // High ceiling so the model can finish searching AND write the full JSON in one pass.
-  for (let i = 0; i < 40; i++) {
-    const resp = await client.messages.create({
-      model: MODEL,
-      max_tokens: 20000,
-      tools: [{ type: "web_search_20250305", name: "web_search", max_uses: 12 }],
-      messages,
-    });
-    lastStop = resp.stop_reason;
-    for (const b of resp.content) if (b.type === "text") texts.push(b.text);
-    if (resp.stop_reason === "pause_turn") {
-      // model paused mid-turn: feed its progress back and continue
-      messages.push({ role: "assistant", content: resp.content });
-      continue;
-    }
-    break; // end_turn (or max_tokens) — the turn is complete
-  }
-  const out = texts.join(""); // contiguous join so a resumed response can't split a string
-  if (!out.trim()) console.error(`No text returned. Last stop_reason: ${lastStop}.`);
-  return out;
-}
-
-const rawText = await research();
-
+// ---- JSON extractor ----
 function extractJSON(s) {
   let t = s.replace(/```json/gi, "```").replace(/```/g, "").trim();
-  t = t.replace(/<\/?cite[^>]*>/gi, ""); // strip any citation tags the model added
+  t = t.replace(/<\/?cite[^>]*>/gi, "");
   const first = t.indexOf("{"), last = t.lastIndexOf("}");
   if (first === -1 || last === -1) throw new Error("No JSON found in model output");
   return JSON.parse(t.slice(first, last + 1));
 }
 
-let digest;
-try {
-  digest = extractJSON(rawText);
-} catch (e) {
-  console.error("Failed to parse model output. Raw text was:\n", rawText);
-  throw e; // fail the run so a broken page never deploys
+// ---- one grouped call (small output → finishes cleanly). Handles pause_turn. ----
+async function ask(prompt, { search = true } = {}) {
+  const messages = [{ role: "user", content: prompt }];
+  const texts = [];
+  for (let i = 0; i < 15; i++) {
+    const resp = await client.messages.create({
+      model: MODEL,
+      max_tokens: 8000,
+      ...(search ? { tools: [{ type: "web_search_20250305", name: "web_search", max_uses: MAX_SEARCHES }] } : {}),
+      messages,
+    });
+    for (const b of resp.content) if (b.type === "text") texts.push(b.text);
+    if (resp.stop_reason === "pause_turn") {
+      messages.push({ role: "assistant", content: resp.content });
+      continue;
+    }
+    break;
+  }
+  return extractJSON(texts.join(""));
 }
 
-digest.date = humanDate;
-digest.generatedAt = generatedAt;
+// ---- assemble the digest one group at a time ----
+const digest = {
+  date: humanDate,
+  generatedAt,
+  breaking: null,
+  tabs: {
+    defense: [], us: [], pacific: [], europe: [], middleEast: [],
+    techAI: { aiCompetition: [], cyberEmerging: [] },
+    cities: [], feelGood: [], onThisDay: [],
+  },
+  topPicks: [],
+};
 
-// ---- persist today's data (source of truth) ----
+console.log("Fetching: breaking + defense…");
+const g1 = await ask(`${persona}
+Return JSON with two keys:
+- "breaking": ONE object — the single biggest news story of the day (any topic).
+- "defense": array of exactly 5 defense / military stories.
+Shape: {"breaking": { }, "defense": [ ]}
+${RULES}`);
+digest.breaking = g1.breaking;
+digest.tabs.defense = g1.defense;
+
+console.log("Fetching: US…");
+const g2 = await ask(`${persona}
+Return JSON: {"us": [ exactly 4 US politics / economy / courts stories ]}
+${RULES}`);
+digest.tabs.us = g2.us;
+
+console.log("Fetching: Pacific…");
+const g3 = await ask(`${persona}
+Return JSON: {"pacific": [ exactly 5 China / Taiwan / Korea / Japan / Indo-Pacific stories ]}
+${RULES}`);
+digest.tabs.pacific = g3.pacific;
+
+console.log("Fetching: Europe + Middle East…");
+const g4 = await ask(`${persona}
+Return JSON with two keys:
+- "europe": array of exactly 4 Europe stories (including Russia / Ukraine).
+- "middleEast": array of exactly 3 Middle East stories.
+Shape: {"europe": [ ], "middleEast": [ ]}
+${RULES}`);
+digest.tabs.europe = g4.europe;
+digest.tabs.middleEast = g4.middleEast;
+
+console.log("Fetching: Tech & AI…");
+const g5 = await ask(`${persona}
+Return JSON with two keys:
+- "aiCompetition": array of exactly 3 frontier-AI / labs / funding stories.
+- "cyberEmerging": array of exactly 2 cyber / AI-policy / emerging-tech stories.
+Shape: {"aiCompetition": [ ], "cyberEmerging": [ ]}
+${RULES}`);
+digest.tabs.techAI.aiCompetition = g5.aiCompetition;
+digest.tabs.techAI.cyberEmerging = g5.cyberEmerging;
+
+console.log("Fetching: Las Vegas + Feel Good…");
+const g6 = await ask(`${persona}
+Return JSON with two keys:
+- "cities": array of exactly 3 Las Vegas / Nevada local news stories.
+- "feelGood": array of exactly 3 genuine acts-of-humanity stories that leave the reader feeling 'humanity
+  remains good' — charitable giving (a large donation, a community rallying for a stranger), humanitarian
+  efforts (including US military or service members doing good — disaster relief, rescues, aid), a long-held
+  dream coming true for someone facing illness or hardship, or acts of generosity, kindness or rescue. Real,
+  recent, specific stories with named people or organizations.
+Shape: {"cities": [ ], "feelGood": [ ]}
+${RULES}`);
+digest.tabs.cities = g6.cities;
+digest.tabs.feelGood = g6.feelGood;
+
+// ---- final no-search call: On This Day + Top Picks (chosen from today's headlines) ----
+console.log("Fetching: On This Day + Top Picks…");
+const allStories = [
+  digest.breaking,
+  ...digest.tabs.defense, ...digest.tabs.us, ...digest.tabs.pacific,
+  ...digest.tabs.europe, ...digest.tabs.middleEast,
+  ...digest.tabs.techAI.aiCompetition, ...digest.tabs.techAI.cyberEmerging,
+  ...digest.tabs.cities, ...digest.tabs.feelGood,
+].filter(Boolean);
+const headlines = allStories.map((s) => s.headline);
+
+const extras = await ask(`Today is ${humanDate}. Return JSON with two keys:
+- "onThisDay": array of exactly 4 real historical events that happened on this calendar date, each
+  {"year": "", "event": ""} (a one-sentence description).
+- "topPicks": choose the 3 highest-impact stories from the headline list below and write a one-sentence
+  teaser for each (max ~20 words, written to make a reader want to click), each {"headline": "", "teaser": ""}.
+  Use the headline text exactly as given.
+Headlines:
+${headlines.map((h) => "- " + h).join("\n")}
+
+FORMATTING RULES: return ONLY the JSON object; no fences, preamble, or commentary; never use the
+double-quote character (") inside any text value (use single quotes).`, { search: false });
+digest.tabs.onThisDay = extras.onThisDay || [];
+digest.topPicks = extras.topPicks || [];
+
+// ---- persist today's data ----
 fs.mkdirSync(DATA, { recursive: true });
 fs.writeFileSync(path.join(DATA, `${dateKey}.json`), JSON.stringify(digest, null, 2));
 
@@ -171,7 +201,7 @@ for (const key of keptKeys) {
   if (key === keptKeys[0]) fs.writeFileSync(path.join(OUT, "index.html"), html);
 }
 
-// ---- build the share blurb (link + 3 biggest) ----
+// ---- share blurb (link + 3 biggest) ----
 const picks = Array.isArray(digest.topPicks) ? digest.topPicks.slice(0, 3) : [];
 const share =
   `📰 Daily Digest — ${humanDate}\n${SITE_URL}\n\nToday's 3 biggest:\n` +
