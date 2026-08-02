@@ -71,6 +71,10 @@ onThisDay items MUST have exactly: "year", "event". topPicks items MUST have exa
 "headline", "teaser".
 
 FORMATTING RULES — the output MUST be valid JSON, so follow these exactly:
+- Do ALL of your web searching FIRST. Once you begin writing the JSON object, output it
+  completely in a single pass, start to finish, without pausing to search again.
+- Do NOT run extra searches just to find or verify URLs. Use the link from the search
+  results where you found each story; if you don't have one, use that outlet's homepage.
 - Return ONLY a single JSON object. No markdown fences, no preamble, no commentary.
 - Do NOT include citation markup of any kind: no <cite> tags, no index numbers, no footnotes.
 - NEVER use the double-quote character (") inside any text value. If you need to quote a
@@ -92,28 +96,25 @@ async function research() {
   const messages = [{ role: "user", content: prompt }];
   const texts = [];
   let lastStop = null;
-  // Loop ceiling (25) sits comfortably above the search budget (max_uses 12), so the
-  // model always finishes searching and writes its JSON before the loop ends.
-  for (let i = 0; i < 25; i++) {
+  // High ceiling so the model can finish searching AND write the full JSON in one pass.
+  for (let i = 0; i < 40; i++) {
     const resp = await client.messages.create({
       model: MODEL,
-      max_tokens: 16000,
+      max_tokens: 20000,
       tools: [{ type: "web_search_20250305", name: "web_search", max_uses: 12 }],
       messages,
     });
     lastStop = resp.stop_reason;
     for (const b of resp.content) if (b.type === "text") texts.push(b.text);
     if (resp.stop_reason === "pause_turn") {
-      // model paused mid-turn (still searching): feed its progress back and continue
+      // model paused mid-turn: feed its progress back and continue
       messages.push({ role: "assistant", content: resp.content });
       continue;
     }
     break; // end_turn (or max_tokens) — the turn is complete
   }
-  const out = texts.join("\n");
-  if (!out.trim()) {
-    console.error(`No text returned. Last stop_reason: ${lastStop}. The model may still have been searching when the loop ended.`);
-  }
+  const out = texts.join(""); // contiguous join so a resumed response can't split a string
+  if (!out.trim()) console.error(`No text returned. Last stop_reason: ${lastStop}.`);
   return out;
 }
 
