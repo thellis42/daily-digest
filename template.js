@@ -1,7 +1,7 @@
 // Renders one full standalone HTML page from a digest object.
 export function renderPage({ digest, navDates, currentKey, pageUrl }) {
   const TAB_CONFIG = [
-    { key: "defense", label: "🛡️ Defense", color: "#1d4ed8" },
+    { key: "defense", label: "🛡️ US Defense", color: "#1d4ed8" },
     { key: "us", label: "🇺🇸 US", color: "#7c3aed" },
     { key: "pacific", label: "🌏 Pacific", color: "#0f766e" },
     { key: "europe", label: "🌍 Europe", color: "#b45309" },
@@ -10,7 +10,30 @@ export function renderPage({ digest, navDates, currentKey, pageUrl }) {
     { key: "cities", label: "🏙️ Las Vegas", color: "#ea580c" },
     { key: "feelGood", label: "✨ Feel Good", color: "#15803d" },
   ];
-  const payload = JSON.stringify({ digest, navDates, currentKey, pageUrl, TAB_CONFIG }).replace(/</g, "\\u003c");
+  // Tabs whose content is split into labeled sub-sections. Each: data key + heading + accent.
+  const SUBSECTIONS = {
+    defense: [
+      { key: "defense", label: "Defense", color: "#1d4ed8" },
+      { key: "acquisitions", label: "Acquisitions", color: "#0ea5e9" },
+    ],
+    pacific: [
+      { key: "pacificCommand", label: "Pacific Command", color: "#0f766e" },
+      { key: "pacingThreat", label: "Pacing Threat", color: "#dc2626" },
+    ],
+    europe: [
+      { key: "ukraineRussia", label: "Ukraine-Russia War", color: "#b45309" },
+      { key: "europe", label: "Europe", color: "#0ea5e9" },
+    ],
+    techAI: [
+      { key: "aiCompetition", label: "AI & Competition", color: "#0369a1" },
+      { key: "cyberEmerging", label: "Cyber & Emerging Tech", color: "#0ea5e9" },
+    ],
+    cities: [
+      { key: "lasVegas", label: "Las Vegas", color: "#ea580c" },
+      { key: "nellis", label: "Nellis/Creech/NTTR", color: "#0ea5e9" },
+    ],
+  };
+  const payload = JSON.stringify({ digest, navDates, currentKey, pageUrl, TAB_CONFIG, SUBSECTIONS }).replace(/</g, "\\u003c");
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -42,6 +65,7 @@ export function renderPage({ digest, navDates, currentKey, pageUrl }) {
   .breaking-head { font-weight:700; color:#fecaca; font-size:14px; margin-bottom:4px; }
   .breaking-body { color:#fca5a5; font-size:12.5px; line-height:1.55; }
   .breaking-src { margin-top:6px; font-size:11px; color:#f87171; font-weight:600; }
+  .breaking-link { display:none; margin-top:6px; margin-left:10px; font-size:11px; font-weight:700; color:#fecaca; text-decoration:underline; }
   .tabbar { overflow-x:auto; background:#0f172a; border-bottom:1px solid #1e293b; -webkit-overflow-scrolling:touch; }
   .tabbar-inner { display:flex; gap:6px; padding:12px 16px; max-width:720px; margin:0 auto; width:max-content; min-width:100%; }
   .tab { background:#1e293b; color:#94a3b8; border:none; border-radius:8px; padding:8px 14px; font-size:12.5px; font-weight:500; cursor:pointer; white-space:nowrap; transition:all .15s ease; font-family:inherit; }
@@ -59,8 +83,6 @@ export function renderPage({ digest, navDates, currentKey, pageUrl }) {
   .read-link { font-size:12px; font-weight:700; text-decoration:none; white-space:nowrap; }
   .read-link:hover { text-decoration:underline; }
   .section-head { font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; margin-bottom:10px; margin-top:18px; padding-bottom:6px; }
-  .note { background:#1e293b; border-radius:10px; padding:14px 18px; color:#64748b; font-size:13px; margin-top:4px; }
-  .note strong { color:#94a3b8; }
   .otd { background:#1e293b; border-radius:10px; padding:16px 18px; margin-top:4px; }
   .otd-head { font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; margin-bottom:12px; padding-bottom:6px; }
   .otd-row { display:flex; gap:12px; margin-bottom:10px; }
@@ -81,16 +103,17 @@ export function renderPage({ digest, navDates, currentKey, pageUrl }) {
     <div class="badge">🔄 updated<span id="stamp"></span></div>
   </div></div></div>
 
-  <div class="navbar"><div class="navbar-inner" id="navbar"></div></div>
-
   <div class="breaking"><div class="wrap"><div class="breaking-inner">
     <div class="breaking-tag">⚡ BREAKING</div>
     <div>
       <div class="breaking-head" id="breaking-head"></div>
       <div class="breaking-body" id="breaking-body"></div>
-      <div class="breaking-src" id="breaking-src"></div>
+      <span class="breaking-src" id="breaking-src"></span>
+      <a class="breaking-link" id="breaking-link" target="_blank" rel="noopener noreferrer">Read full article →</a>
     </div>
   </div></div></div>
+
+  <div class="navbar"><div class="navbar-inner" id="navbar"></div></div>
 
   <div class="tabbar"><div class="tabbar-inner" id="tabbar"></div></div>
 
@@ -104,7 +127,8 @@ export function renderPage({ digest, navDates, currentKey, pageUrl }) {
 
 <script>
 const STATE = ${payload};
-const DIGEST = STATE.digest, NAV = STATE.navDates, CURRENT = STATE.currentKey, PAGE_URL = STATE.pageUrl, TAB_CONFIG = STATE.TAB_CONFIG;
+const DIGEST = STATE.digest, NAV = STATE.navDates, CURRENT = STATE.currentKey, PAGE_URL = STATE.pageUrl;
+const TAB_CONFIG = STATE.TAB_CONFIG, SUBSECTIONS = STATE.SUBSECTIONS;
 let activeTab = "defense";
 
 function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
@@ -116,10 +140,8 @@ function buildBlurb(){
     picks.map((p,i)=>(i+1)+". "+p.headline+" — "+p.teaser).join("\\n");
 }
 function flashCopied(){
-  const btn = document.getElementById("share-btn");
-  const toast = document.getElementById("toast");
-  btn.classList.add("copied"); btn.textContent = "✓ Copied!";
-  toast.classList.add("show");
+  const btn = document.getElementById("share-btn"), toast = document.getElementById("toast");
+  btn.classList.add("copied"); btn.textContent = "✓ Copied!"; toast.classList.add("show");
   setTimeout(()=>{ btn.classList.remove("copied"); btn.textContent = "▸ Share this digest"; toast.classList.remove("show"); }, 2000);
 }
 function fallbackCopy(text){
@@ -131,9 +153,8 @@ function fallbackCopy(text){
 }
 function copyShare(){
   const text = buildBlurb();
-  if(navigator.clipboard && navigator.clipboard.writeText){
-    navigator.clipboard.writeText(text).then(flashCopied).catch(()=>fallbackCopy(text));
-  } else { fallbackCopy(text); }
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(flashCopied).catch(()=>fallbackCopy(text)); }
+  else { fallbackCopy(text); }
 }
 
 // ---- render ----
@@ -157,6 +178,9 @@ function toggleCard(btn){
   body.setAttribute("data-expanded", exp ? "false" : "true");
   btn.textContent = exp ? "Read more ▼" : "Show less ▲";
 }
+function sectionHead(label, color){
+  return '<div class="section-head" style="color:'+color+';border-bottom:1px solid '+color+'33">'+esc(label)+'</div>';
+}
 function renderNav(){
   document.getElementById("navbar").innerHTML =
     '<span class="nav-caption">Archive</span>' +
@@ -174,12 +198,12 @@ function renderContent(){
   document.getElementById("tab-accent").style.background = accent;
   document.getElementById("tab-title").textContent = cfg.label;
   let html = "";
-  if(activeTab==="techAI"){
-    html += '<div class="section-head" style="color:'+accent+';border-bottom:1px solid '+accent+'33">AI &amp; Competition</div>';
-    html += (data.techAI.aiCompetition||[]).map(s=>cardHTML(s,accent)).join("");
-    const cy = "#0ea5e9";
-    html += '<div class="section-head" style="color:'+cy+';border-bottom:1px solid '+cy+'33">Cyber &amp; Emerging Tech</div>';
-    html += (data.techAI.cyberEmerging||[]).map(s=>cardHTML(s,cy)).join("");
+  const subs = SUBSECTIONS[activeTab];
+  if(subs){
+    for(const sub of subs){
+      html += sectionHead(sub.label, sub.color);
+      html += ((data[activeTab] && data[activeTab][sub.key]) || []).map(s=>cardHTML(s, sub.color)).join("");
+    }
   } else if(activeTab==="feelGood"){
     html += (data.feelGood||[]).map(s=>cardHTML(s,accent)).join("");
     html += '<div class="otd"><div class="otd-head" style="color:'+accent+';border-bottom:1px solid '+accent+'33">📅 On This Day in History</div>';
@@ -197,6 +221,10 @@ document.getElementById("stamp").textContent = DIGEST.generatedAt || "";
 document.getElementById("breaking-head").textContent = DIGEST.breaking.headline;
 document.getElementById("breaking-body").textContent = DIGEST.breaking.body;
 document.getElementById("breaking-src").textContent = DIGEST.breaking.source;
+(function(){
+  const u = DIGEST.breaking.url, bl = document.getElementById("breaking-link");
+  if(u && /^https?:\\/\\//.test(u)){ bl.href = u; bl.style.display = "inline-block"; }
+})();
 document.getElementById("footer").textContent =
   "Generated " + (DIGEST.generatedAt || "") + " · AI-summarized from public reporting — verify anything important against the original source.";
 renderNav(); renderTabs(); renderContent();
