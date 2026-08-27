@@ -53,7 +53,23 @@ function extractJSON(s) {
   return JSON.parse(t.slice(first, last + 1));
 }
 
-// ---- one grouped call (small output → finishes cleanly). Handles pause_turn. ----
+// ---- repair pass: ask the model (no tools) to fix invalid JSON ----
+async function repairJSON(broken) {
+  const resp = await client.messages.create({
+    model: MODEL,
+    max_tokens: 8000,
+    messages: [{ role: "user", content:
+`The text below is meant to be ONE valid JSON object but has errors (commonly an unescaped double-quote
+inside a string value, or stray tags). Return ONLY the corrected, valid JSON object — no commentary, no
+code fences. Replace any double-quote characters that appear INSIDE string values with single quotes;
+do not otherwise change the data.
+
+` + broken }],
+  });
+  return resp.content.filter((b) => b.type === "text").map((b) => b.text).join("");
+}
+
+// ---- one grouped call (small output → finishes cleanly). Handles pause_turn + a JSON repair retry. ----
 async function ask(prompt, { search = true } = {}) {
   const messages = [{ role: "user", content: prompt }];
   const texts = [];
@@ -68,7 +84,14 @@ async function ask(prompt, { search = true } = {}) {
     if (resp.stop_reason === "pause_turn") { messages.push({ role: "assistant", content: resp.content }); continue; }
     break;
   }
-  return extractJSON(texts.join(""));
+  const raw = texts.join("");
+  try {
+    return extractJSON(raw);
+  } catch (e) {
+    console.warn("JSON parse failed; attempting a repair pass…");
+    const fixed = await repairJSON(raw);
+    return extractJSON(fixed); // if this still fails, the error propagates and the build stops
+  }
 }
 
 // ---- digest skeleton ----
