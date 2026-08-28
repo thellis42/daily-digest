@@ -1,151 +1,163 @@
 {
   "date": "Friday, August 28, 2026",
-  "generatedAt": "Fri, Aug 28, 6:53 AM PDT",
+  "generatedAt": "Fri, Aug 28, 2:40 PM PDT",
   "breaking": {
-    "headline": "Iran war costs push US Navy into fiscal emergency, internal memos show",
-    "body": "According to Pentagon documents and interviews reported by the Guardian on August 27, the Navy has been forced to shift money out of payroll and other core accounts to cover the costs of the ongoing air campaign against Iran, which has also drained munitions stockpiles. A Pentagon memo reportedly warns of shortfalls in payroll funding after the department repeatedly raided those accounts, with retired naval officer Harlan Ullman describing the situation bluntly as broken. The strain comes as Iranian retaliatory strikes have damaged US-linked bases across the Middle East, compounding budget pressure just as the Pentagon separately weighs troop cuts in Europe.",
-    "source": "Foreign Exchanges / The Guardian",
-    "url": "https://www.foreignexchanges.news/p/world-roundup-august-27-2026"
+    "headline": "Trump Abandons Iran Truce Framework as War Grinds Into Seventh Month",
+    "body": "Six months into the US-Iran conflict, President Trump has told mediators he no longer wants to revive June's memorandum of understanding and is instead pushing harder terms, including a full reopening of the Strait of Hormuz and new curbs on Tehran's nuclear program. Qatar's prime minister flew to Tehran on August 27 to try to restart diplomacy, while Oman and Iran continue negotiating a temporary shipping corridor through the strait. Washington has simultaneously widened sanctions on Iranian aviation, shipping, technology, gold and digital-asset sectors, with Treasury Secretary Bessent warning of an economic 'D-Day' for any country that keeps trading with Tehran.",
+    "source": "CNN",
+    "url": "https://www.cnn.com/2026/08/27/world/live-news/iran-war-trump"
   },
   "tabs": {
     "defense": {
       "defense": [
         {
-          "headline": "Pentagon fast-tracks review of US troop levels in Europe",
-          "body": "Reuters reported August 27 that the Defense Department is aiming to finish its review of US military posture in Europe by November 6, about a month ahead of schedule, and plans to hand Defense Secretary Pete Hegseth at least four options for drawing down the roughly 80,000 troops still stationed there. The push aligns with President Trump's demand that European allies shoulder more of NATO's defense burden, sharpened by frustration that Europeans didn't back the Iran campaign to the degree he wanted. Washington has also circulated a questionnaire to European allies probing base-access rules and restrictions on defense-industrial cooperation.",
-          "source": "Foreign Exchanges / Reuters",
-          "url": "https://www.foreignexchanges.news/p/world-roundup-august-27-2026"
+          "headline": "Carrier Swap Highlights Strain of Extended Middle East Deployment",
+          "body": "The carrier USS George Washington arrived in the Middle East on August 26 to relieve the USS Abraham Lincoln, which is finally heading home after an unusually long deployment tied to the six-month war with Iran. The rotation underscores how much the sustained carrier presence has stretched the Navy even as no resolution to the conflict is in sight.",
+          "source": "CNN",
+          "url": "https://www.cnn.com/2026/08/20/world/live-news/iran-war-trump"
         },
         {
-          "headline": "Navy unveils classified seabed-warfare drone armed with heavy torpedoes",
-          "body": "Naval News reported August 27 on Liberator, a previously undisclosed seabed-warfare system launched from uncrewed submarines and capable of firing the US Navy's largest ship-killing torpedoes. The disclosure adds to a string of recent Navy unmanned-systems reveals aimed at expanding undersea strike options against peer competitors. Details on deployment timelines remain limited given the program's classified status.",
-          "source": "Naval News",
-          "url": "https://www.navalnews.com/category/naval-news/"
+          "headline": "Federal Judge Strikes Down Pentagon's Anthropic Supply-Chain Designation",
+          "body": "A federal judge this week ruled that the Pentagon's designation of AI firm Anthropic as a supply-chain risk was unlawful, undercutting the Department of War's attempt to gatekeep which AI vendors can serve the military. The ruling comes just months after the Pentagon signed multi-year deals with eight major tech firms to embed generative AI into classified Impact Level 6 and 7 networks, and it raises new questions about how the department can vet frontier AI providers going forward.",
+          "source": "The Hill",
+          "url": "https://thehill.com/policy/technology/6056449-openai-tech-firms-cyberattacks-response/"
         },
         {
-          "headline": "Colby presses NATO allies to prove they can lead Europe's defense",
-          "body": "US Under Secretary of War for Policy Elbridge Colby met NATO Secretary General Mark Rutte and the North Atlantic Council in Brussels on August 27, publicly pressing allies to demonstrate they are stepping up as Washington reorients toward the Indo-Pacific and homeland priorities. The visit coincided with the Pentagon's accelerated European posture review and came as some allies bristled at not being consulted before the US strikes on Iran. Colby argued the US still needs guaranteed operational access and predictability from allies even as it shifts emphasis away from the continent.",
-          "source": "The Washington Times",
-          "url": "https://www.washingtontimes.com/news/2026/aug/27/us-defense-review-presses-nato-allies-prove-taking-lead-europe/"
+          "headline": "US and Allies Wrap Pacific Dragon Missile Defense Drill as New Zealand Sails West",
+          "body": "US 3rd Fleet, the Missile Defense Agency and multinational partners concluded the biennial Pacific Dragon 2026 exercise around Hawaii, refining integrated air and missile defense tactics and tactical data-link sharing across the Indo-Pacific. Separately, a Royal New Zealand Navy task group built around the frigate HMNZS Te Mana and tanker HMNZS Aotearoa has departed on a two-month Indo-Pacific deployment, opening with patrols to monitor North Korean sanctions evasion.",
+          "source": "USNI News",
+          "url": "https://news.usni.org/2026/08/18/u-s-allies-hold-major-ballistic-missile-defense-drill-new-zealand-starts-pacific-patrol"
         }
       ],
       "acquisitions": [
         {
-          "headline": "Navy pushes Castelion's Blackbeard hypersonic missile toward 2028 fielding",
-          "body": "The US Navy awarded Castelion an $89.9 million contract on August 26 to advance its Blackbeard hypersonic strike weapon toward Early Operational Capability by 2028, per Naval News. The deal builds on Castelion's rapid growth in hypersonic strike systems and reflects the Pentagon's urgency to field longer-range conventional strike options amid stretched munitions stocks following the Iran campaign.",
-          "source": "Naval News",
-          "url": "https://www.navalnews.com/category/naval-news/"
+          "headline": "Boeing Locks In $131 Billion F-15 Sustainment Mega-Contract",
+          "body": "Boeing secured a ceiling contract worth up to $131.23 billion on August 26 covering long-term production, modernization and sustainment of F-15 fighters for the US and allied air forces. The award cements the F-15's role alongside fifth-generation fleets for at least another decade and gives Boeing's defense production line a multi-year revenue backbone.",
+          "source": "Army Recognition",
+          "url": "https://www.armyrecognition.com/news/aerospace-news"
         },
         {
-          "headline": "Missile Defense Agency taps X-Bow for low-cost interceptor prototype",
-          "body": "The Missile Defense Agency awarded X-Bow Systems a $10.98 million contract to develop and flight-test a low-cost ballistic-missile interceptor, according to Army Recognition's rolling defense-news tracker. The award is part of a broader Pentagon push toward cheaper, faster-to-produce interceptors as adversary missile inventories grow and existing systems like Patriot remain in high demand.",
+          "headline": "Air Force Orders New AESA Radar for Aging B-52 Fleet",
+          "body": "The US Air Force awarded Raytheon a $603 million contract to equip B-52 Stratofortress bombers with the new AN/APQ-188 AESA radar, part of the broader B-52J modernization meant to keep the decades-old airframe viable into the 2050s. The upgrade is intended to sharpen the bomber's target detection and survivability against modern air defenses.",
           "source": "Army Recognition",
-          "url": "https://www.armyrecognition.com/news/army-news/2026"
+          "url": "https://www.armyrecognition.com/news/aerospace-news"
         }
       ]
     },
     "us": [
       {
-        "headline": "House Democrats Open Insider-Trading Probe Into Trump Jr.'s Venture Fund",
-        "body": "Rep. Jamie Raskin, the top Democrat on the House Judiciary Committee, sent a letter this week demanding records from 1789 Capital, the venture firm Donald Trump Jr. joined as a partner just four days after the 2024 election. Raskin's letter flags the firm's leap from roughly $150 million to about $3 billion in assets under management, pointing to its stake in rare-earths firm Vulcan Elements, which later landed a $620 million Pentagon loan, plus bets on Juul, Polymarket and Anduril Industries. Trump Jr. has denied having access to nonpublic government information, saying his investment timing reflected educated guesses rather than insider knowledge.",
-        "source": "MS NOW",
-        "url": "https://www.ms.now/news/don-jr-1789-capital-investigation"
+        "headline": "Boston Judge Halts Trump-Ordered USPS Mail Ballot Restrictions Again",
+        "body": "U.S. District Judge Indira Talwani issued a 14-day temporary restraining order on August 27 blocking core provisions of a Postal Service rule that would require states to submit absentee-voter lists before USPS delivers mail ballots. The move comes just days after the Supreme Court's August 24 decision forced Talwani to vacate her earlier nationwide injunction, and sets up a September 3 hearing on a longer-term block. Democratic-led states and groups like the League of Women Voters argue the rule, finalized August 21, risks disenfranchising voters with the November 3 midterms just over two months away.",
+        "source": "Reuters/US News",
+        "url": "https://www.usnews.com/news/politics/articles/2026-08-27/judge-blocks-rule-implementing-trump-plan-to-restrict-mail-in-voting"
       },
       {
-        "headline": "Boston Judge Lifts Block on Trump's Mail-Ballot Order, Fueling New Legal Fight",
-        "body": "A federal judge in Boston has voided the nationwide injunction that had been stopping the U.S. Postal Service from carrying out President Trump's executive order curbing mail-in ballot handling for the midterms. The reversal means the order is technically in force nationwide for the first time, though voting-rights groups are expected to seek a fresh injunction within days. With the midterms about ten weeks out, the whiplash is complicating last-minute planning by state election officials over mail-ballot logistics.",
-        "source": "NPR",
-        "url": "https://www.npr.org/sections/elections/"
+        "headline": "Federal Judge Presses Kennedy Center Board Over Renewed Bid to Add Trump's Name",
+        "body": "U.S. District Judge Christopher Cooper held an emergency hearing August 27 to weigh blocking a Kennedy Center Board resolution, passed August 13, that would inscribe the facade with language crediting Trump for 'restoring and renovating' the venue and naming its grounds after him. The move follows Cooper's May ruling that only Congress can rename the Kennedy Center, a decision the administration is still appealing while a tarp has covered the marble facade since June. Commerce Secretary Howard Lutnick, who helps oversee the center, defended the board's vote as overwhelming and framed Trump's involvement as necessary to prevent the building's physical deterioration.",
+        "source": "Reuters/Detroit News",
+        "url": "https://www.detroitnews.com/story/news/nation/2026/08/27/us-judge-weighs-challenge-restore-trumps-name-kennedy-center/91487232007/"
       },
       {
-        "headline": "Court Ruling Loosens Super PAC Coordination Limits Before Midterms",
-        "body": "A federal court decision this week in NRSC v. FEC narrowed the legal definition of 'coordination' between campaigns and Super PACs, stripping the Federal Election Commission of several tools it had used to police joint spending. Analysts say the ruling, landing just over two months before the November 3 midterms, could unleash a new wave of tightly aligned, record-setting Super PAC spending. Because the decision removes old boundaries without installing clear replacements, campaign-finance lawyers warn the rules of engagement will now largely be shaped through further litigation rather than FEC regulation.",
-        "source": "WRDW",
-        "url": "https://politics-government.news-articles.net/content/2026/08/27/federal-court-ruling-reshapes-2026-midterm-campaign-finance.html"
+        "headline": "Trump Renames Lake Ontario 'Lake America' as Canada Trade War Deepens",
+        "body": "Trump signed an executive order August 27 declaring Lake Ontario will 'immediately' become 'Lake America,' escalating tensions after the U.S. imposed 50% tariffs on roughly $20 billion of Canadian goods over the preceding weekend. Canada retaliated with matching dollar-for-dollar tariffs of up to 50% set to take effect September 8, though it trimmed levies on seafood and fish products this week. Canadian Prime Minister Mark Carney rejected the renaming, noting the Indigenous-derived name predates both nations and vowing the lake will 'forever' be called Lake Ontario, as U.S. Trade Representative Jamieson Greer confirmed talks with Ottawa remain stalled.",
+        "source": "CNN",
+        "url": "https://www.cnn.com/2026/08/27/politics/trump-canada-lake-ontario-america"
       },
       {
-        "headline": "Markets Brace for Jobs Report as Fed Weighs Size of Next Rate Cut",
-        "body": "Traders are focused on Friday's August jobs report along with incoming ISM manufacturing and services surveys, JOLTS openings data and the ADP employment reading, all landing before the Federal Reserve's September 15-16 policy meeting. The data dump is seen as pivotal for whether the central bank opts for a modest or deeper rate cut after a summer of tariff-driven inflation pressure layered on top of a visibly cooling labor market. The reports coincide with a heavy earnings slate from companies including Dell, NetApp and Broadcom, adding to volatility risk heading into September.",
-        "source": "Schaeffer's Investment Research",
-        "url": "https://www.schaeffersresearch.com/content/news/2026/08/27/the-week-ahead-august-jobs-report-takes-center-stage"
+        "headline": "Republican Governor Breaks Ranks Over DOJ Election Monitors Ahead of Midterms",
+        "body": "Wyoming's Republican Governor Mark Gordon publicly voiced concerns August 28 about a Justice Department plan to deploy election monitors across states for the November midterms, a rare break from his party as Trump's administration expands federal oversight of state-run elections. The monitor deployment, reported to involve roughly 1,000 personnel, arrives alongside the administration's separate push to restrict mail ballots via USPS rulemaking, compounding a broader fight over federal versus state control of election administration less than 70 days before voters go to the polls.",
+        "source": "CNN Newsource",
+        "url": "https://kvia.com/category/politics/cnn-us-politics/"
       }
     ],
     "pacific": {
       "pacificCommand": [
         {
-          "headline": "Philippines Presses UN Seabed Claim as South China Sea Friction Persists",
-          "body": "Manila's standoff with Beijing over Scarborough Shoal and Second Thomas Shoal remains unresolved, with the Council on Foreign Relations noting three separate ship-to-ship clashes in a single week in July that triggered joint U.S.-Philippines-Japan naval drills. Talks on a binding South China Sea code of conduct remain stalled even as the Philippines, chairing ASEAN this year, pushes its formal UN bid for extended seabed rights off Palawan. Manila has simultaneously deepened defense ties with Tokyo, Washington and Canberra, including expanded U.S. base access and Japanese arms transfers, cementing its role as the region's most exposed frontline state."
+          "headline": "Tokyo Prepares Record $56 Billion Defense Budget After White Paper Names China Top Threat",
+          "body": "Japan's Ministry of Defense is finalizing a record 8.9 trillion yen (about $56.1 billion) budget request due at month's end, building on the 2026 Defense White Paper approved August 4 that labels China 'the greatest strategic challenge' to Japanese security. The document endorses continued fielding of Type-25 land-based anti-ship missiles with roughly 1,000-kilometer range and expanded Tomahawk cruise-missile purchases capable of striking Chinese territory from Japanese destroyers. Tokyo has set a goal of taking primary responsibility for repelling invasions of its territory by fiscal year 2027, a marked shift from decades of near-total reliance on Washington.",
+          "source": "Defense News",
+          "url": "https://www.defensenews.com/global/asia-pacific/2026/08/10/japans-2026-defense-white-paper-highlights-new-era-of-crisis-in-indo-pacific/"
         },
         {
-          "headline": "Japan Set to Submit Record $56 Billion Defense Budget Request",
-          "body": "Tokyo is finalizing a record roughly 8.9 trillion yen (about $56.1 billion) defense budget request due for submission at the end of August, building on this year's Defense of Japan white paper that labeled China the country's greatest strategic challenge. The August 4 white paper also flagged deepening China-Russia military coordination and warned a Ukraine-style act of aggression could occur in East Asia. Prime Minister Sanae Takaichi's government is aiming to lock in its 2% of GDP defense-spending target and revise Japan's three core security documents before year's end."
+          "headline": "Manila's ASEAN Chairmanship Fails to Harden Bloc's South China Sea Stance",
+          "body": "Despite holding the ASEAN chair in 2026 with new domestic legal groundwork and bilateral partner support, the Philippines could not move fellow foreign ministers toward tougher joint language on the South China Sea, producing a communique nearly identical to Malaysia's from the prior year. Manila is still pushing for a Code of Conduct by year's end, with Foreign Secretary Theresa Lazaro warning the waterway must not become 'another Strait of Hormuz' given the fuel-price shocks the Philippines has absorbed from the Iran war. The diplomatic stall comes as Philippine and Chinese vessels continue clashing at Scarborough and Second Thomas Shoals on a near-weekly basis.",
+          "source": "Asia Times",
+          "url": "https://asiatimes.com/2026/07/the-south-china-sea-consensus-no-asean-chair-can-move/"
         },
         {
-          "headline": "Solomon Islands Signs Maritime Security Pact With Washington",
-          "body": "The Solomon Islands and the United States have signed a shiprider agreement on countering illicit transnational maritime activity, allowing American vessels to patrol Solomon waters jointly with local personnel. The deal marks a notable shift for Honiara, which had previously leaned toward Beijing under a 2022 security pact. Analysts tracking the region see it as part of a broader Washington effort to counter Chinese inroads among Pacific Island states through capacity-building and law-enforcement cooperation rather than direct military buildup."
+          "headline": "Australia Trials University-Built Telescope to Close Space-Surveillance Gaps",
+          "body": "The Australian Defence Force disclosed August 27 that it is trialing a University of New South Wales-developed 'Viper' telescope to test how ground-based optical sensors, automated tasking, and data analysis can strengthen the country's space situational awareness. The pilot reflects growing concern in Canberra about tracking adversary satellites and counterspace activity across the Indo-Pacific as reliance on allied space assets comes under scrutiny. It adds to a broader push by Australia and regional partners to build indigenous surveillance and targeting infrastructure rather than depending solely on U.S. systems.",
+          "source": "Defence Connect",
+          "url": "https://www.defenceconnect.com.au/news"
         }
       ],
       "pacingThreat": [
         {
-          "headline": "PLA and Indonesian Navies Stage Joint Drill Off Taiwan's Coast",
-          "body": "A Chinese PLA Navy frigate and an Indonesian Navy frigate conducted what Beijing termed a naval navigational exercise east of Taiwan, with Chinese state media using the drill to assert sovereignty claims over Taiwan's eastern exclusive economic zone. The exercise follows near-continuous China Coast Guard patrols east of Taiwan ongoing since June, part of a broader pattern analysts describe as Beijing expanding de facto control through pressure short of open conflict. Open-source military trackers assess the tactic is designed to gradually erode Taiwanese sovereignty while setting favorable conditions for any future PLA operation."
+          "headline": "Analysts Map PLA Milestones Toward Xi's 2027 Taiwan-Readiness Deadline",
+          "body": "A August 27 analysis from the Lowy Institute by a 35-year CIA veteran of East Asia analysis lays out the operational signposts intelligence watchers are tracking as the PLA approaches Xi Jinping's 2027 military-readiness target, including expanded space launches, a proliferated low-earth-orbit satellite constellation resembling Starlink, and counterspace operations designed to threaten Taiwanese and U.S. communications. The piece warns these steps will increasingly blur the line between routine proficiency exercises and genuine invasion preparation. It lands amid what the author calls an unusually volatile stretch in both U.S.-China and cross-strait relations.",
+          "source": "Lowy Institute",
+          "url": "https://www.lowyinstitute.org/the-interpreter/china-taiwan-pla-s-2027-milestones"
         },
         {
-          "headline": "PLA Marks 99th Anniversary Touting New Carrier Air Wing Amid Leadership Turmoil",
-          "body": "China's military used its August 1 founding anniversary to spotlight the formal rollout of three new carrier-based aircraft unveiled in May, the J-35 stealth fighter, the J-15T, and the KJ-600 airborne early-warning plane, as part of Xi Jinping's drive toward a world-class force by the PLA's 2027 centenary goal. State media paired the announcement with continuing anti-piracy patrols in the Gulf of Aden and hospital-ship diplomacy across the South Pacific and Latin America. The messaging lands against a backdrop of unusual turbulence at the top of the PLA following the January 2026 detention of Central Military Commission Vice Chairman Zhang Youxia, the most senior officer purged since 1971."
+          "headline": "PLA Missile Test Adds Nuclear Second-Strike Capability to Taiwan Pressure Campaign",
+          "body": "The Council on Foreign Relations' Taiwan conflict tracker, updated August 27, reports that a recent PLA missile test demonstrates an enhanced nuclear second-strike capability, layering a new strategic-deterrence dimension onto Beijing's grey-zone campaign around the island. That campaign already includes near-daily air-defense-identification-zone incursions and expanding coast guard patrols tied to Xi's stated 're-unification' objective by 2049. The tracker also notes that mixed signals from President Trump on U.S. defense commitments have deepened uncertainty in Taipei about the durability of American backing.",
+          "source": "Council on Foreign Relations",
+          "url": "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-over-taiwan"
         },
         {
-          "headline": "Taiwan Runs Largest-Ever Invasion-Response Drills, Borrowing U.S. Playbook",
-          "body": "Taiwan carried out its largest annual Han Kuang exercises to date this month, simulating a 10-day response to a Chinese invasion with chemical-attack scenarios, live-fire training and tactics modeled on U.S. military doctrine. An August 13 iteration had island forces rehearsing tunnel defense designed to block PLA advances, part of a wider push to fold low-cost drone warfare into Taiwan's defense concept. The drills come as Taipei's planners study lessons from Ukraine and flag that Chinese coast guard and maritime militia patrols around Taiwan's outlying islands have become an almost permanent fixture since 2024."
+          "headline": "Taiwan Logs Dozens of Daily PLA Incursions Amid Its Own Largest-Ever Reservist Call-Up",
+          "body": "Taiwan's Ministry of National Defense has continued tallying near-daily PLA gray-zone activity, tracking Chinese military aircraft and PLA Navy vessels dozens of times within single-day windows through August, prompting Taipei to scramble combat air patrols, deploy naval ships, and activate coastal missile batteries each time. The tempo coincides with Taiwan's own annual exercises, which this year mobilized the island's largest-ever reservist call-up and featured live-fire drills more extensive than those held during the 1996 Third Taiwan Strait Crisis. Together, the trends point to both sides preparing for a potentially prolonged, Ukraine-style conflict rather than a short, decisive fight.",
+          "source": "Taiwan News",
+          "url": "https://www.taiwannews.com.tw/news/6415051"
         }
       ]
     },
     "europe": {
       "ukraineRussia": [
         {
-          "headline": "Russia Launches Fresh Wave of Over 100 Attack Drones Overnight",
-          "body": "Russian forces fired more than 100 jet-powered attack drones at Ukraine overnight into August 28, with Ukrainian air defenses downing 137 drones across 16 impact sites. Strikes hit Nova Post warehouse facilities in Kyiv region's Bilohorodka community and a production site in Sviatopetrivske, while attacks on Kharkiv and 16 other settlements in Kharkiv region killed two people and wounded 13. Kyiv-region residents endured roughly 14 hours of air-raid sirens according to Ukraine's emergency service, a reminder that bombardment continues unabated even as ceasefire diplomacy resurfaces.",
-          "source": "RBC-Ukraine",
-          "url": "https://newsukraine.rbc.ua/war-in-ukraine"
+          "headline": "Russia Pummels Kyiv and Central Ukraine in Hours-Long Drone Barrage",
+          "body": "A sustained Russian drone assault stretched into the morning of August 27, striking Kyiv's Holosiivskyi and Pecherskyi districts and damaging a sports complex and vehicles, while separate strikes destroyed a major Roshen confectionery warehouse in Boryspil district and hit distribution centers belonging to the Comfy and Aurora retail chains. Industrial enterprises in Kremenchuk and an energy facility near Myrhorod in Poltava region were also targeted, triggering emergency power outages that left residents of seven settlements without electricity. The attacks form part of a broader pattern of Russian strikes stretching from Odesa to Kharkiv as the war grinds on with no ceasefire in sight.",
+          "source": "United24 Media / Ukrinform",
+          "url": "https://united24media.com/war-in-ukraine"
         },
         {
-          "headline": "Kremlin Signals Openness to New Trilateral Talks as Moldova, Ukraine Deepen Security Ties",
-          "body": "The Kremlin responded Thursday to reports of possible new Ukraine-Russia-US negotiations in September, even as fighting continues on the ground. Separately, Moldovan President Maia Sandu met with Volodymyr Zelensky and called for tighter Moldova-Ukraine-Romania cooperation on airspace protection, citing ongoing Russian aggression, while also discussing bilateral energy cooperation. Sweden additionally announced it will transfer 10 high-speed boats to Ukraine for mine clearance and rescue work, a sign allies keep bolstering military support alongside the renewed diplomatic track.",
+          "headline": "Ukraine Hits Russian Command Posts Near Donetsk as Moscow Plots New Mobilization Wave",
+          "body": "Ukrainian forces struck both the main and reserve command posts of the Russian army near occupied Donetsk with missiles on August 26 and overnight into August 27, targeting Moscow's operational leadership in the region. Simultaneously, Kyiv's intelligence assessments indicate Russia is preparing an additional mobilization drive spanning 2026 and 2027, aiming to recruit roughly 300,000 troops this year and another 300,000 next year to sustain manpower for the grinding war of attrition. Ukraine also reported drone strikes on Russian energy infrastructure, including the Bashneft-Ufaneftekhim refinery in Bashkortostan, extending the war deep into Russian territory.",
           "source": "Ukrinform",
-          "url": "https://www.ukrinform.net/block-lastnews"
+          "url": "https://www.ukrinform.net/rubric-ato"
         }
       ],
       "europe": [
         {
-          "headline": "Pentagon Presses NATO Allies as Patriot Missile Stocks Hit 'Beyond Critical' Lows",
-          "body": "US Under Secretary of Defense Elbridge Colby met NATO chief Mark Rutte in Brussels on August 27, pressing European allies to take the lead in their own defense as Washington redirects focus to the Indo-Pacific; roughly 80,000 US troops remain in Europe amid a Pentagon review of possible further cuts. The visit coincided with an AP report that US Patriot interceptor stocks in Europe are 'beyond critical,' with the six-month Iran war having consumed about 1,500 of the US's 2,330 Patriot interceptors, according to CSIS estimates. A NATO official confirmed low Patriot inventories among American and allied forces, leaving only limited capability to stop a stray or deliberate Russian ballistic missile strike, though Germany's first European Patriot production line is set to open in September.",
-          "source": "Washington Times / AP",
+          "headline": "Pentagon Pressures NATO Allies to Shoulder More of Europe's Defense",
+          "body": "US Under Secretary of Defense Elbridge Colby met NATO Secretary General Mark Rutte at alliance headquarters in Brussels on August 27 to press European allies to prove they are stepping up as Washington redirects attention toward challenges closer to home and in the Indo-Pacific. The Pentagon has already begun trimming the roughly 80,000 US troops still stationed in Europe and is reviewing how much deeper those cuts should go, with further reductions contingent on how allies respond to a US survey demanding greater basing and airspace access. Colby singled out Germany, Poland, and Scandinavian countries for praise while pointedly saying Washington wants to see more from the United Kingdom.",
+          "source": "Washington Times",
           "url": "https://www.washingtontimes.com/news/2026/aug/27/us-defense-review-presses-nato-allies-prove-taking-lead-europe/"
         },
         {
-          "headline": "Hybrid Sabotage Wave Keeps Testing European Airspace and Infrastructure",
-          "body": "European governments are contending with an escalating pattern of drone incursions and suspected Russian sabotage: NATO fighter jets shot down a stray drone over Latvia in mid-August, German airports have repeatedly halted flights after drone sightings, and Lithuanian officials have warned Russia may be preparing a false-flag drone attack on its territory. Poland separately disclosed it had foiled a plot linked to Russia to kill a Ukrainian-US citizen on Polish soil. With NATO itself warning that Moscow's tolerance for risk near allied airspace is rising, hybrid-warfare resilience has become the most pressing near-term security concern for European capitals outside the Ukraine front line.",
-          "source": "Bloomberg",
-          "url": "https://www.bloomberg.com/latest/nato"
+          "headline": "Migration Remains Europe's Defining Political Fault Line",
+          "body": "Irregular migration continues to dominate European politics, illustrated starkly this summer when more than 70,000 people entered Spain's North African enclave of Ceuta within hours, forcing emergency border measures and a five-point enforcement plan from Brussels. The European Commission has responded by proposing to nearly triple migration-management funding to €81 billion in the 2028-2034 EU budget, including €12 billion for the border agency Frontex, whose mandate is set to expand significantly. Rights groups, including the EU's own Fundamental Rights Agency, warn that accountability for abuses at the bloc's borders still lags far behind the enforcement buildup.",
+          "source": "Human Rights Watch / The Workers Rights",
+          "url": "https://www.hrw.org/world-report/2026/country-chapters/european-union"
         }
       ]
     },
     "middleEast": [
       {
-        "headline": "Qatar Pushes Tehran Diplomacy as Iran War Nears Six-Month Mark",
-        "body": "Qatari Prime Minister Sheikh Mohammed bin Abdulrahman al-Thani traveled to Tehran on August 27 to relaunch mediation efforts, meeting Iran's foreign minister as the conflict approaches its six-month anniversary. Iranian Foreign Ministry spokesman Esmaeil Baghaei confirmed the trip is meant to continue Qatar's mediation role, even as the White House said it was not currently engaged in direct talks with Tehran. Separately, a senior Iranian source cautioned that a proposed Iran-Oman agreement on sharing Strait of Hormuz revenues has not been finalized, despite an earlier IRGC claim that terms had been reached.",
-        "source": "Just Security (Reuters)",
+        "headline": "Qatar Tries to Revive Iran Diplomacy as Hormuz Talks Stall",
+        "body": "Qatari Prime Minister Sheikh Mohammed bin Abdulrahman al-Thani traveled to Tehran on August 27 to meet Iranian Foreign Minister Abbas Araghchi in an attempt to relaunch mediation, even as the White House insists it is not currently talking to Iran and vows to intensify economic pressure. A senior Iranian source told Reuters that a proposed agreement with Oman over sharing the Strait of Hormuz and its revenues has not been finalized despite Iran's Revolutionary Guard claiming a framework had been reached. The unresolved Hormuz question remains the central flashpoint six months into the wider Iran war.",
+        "source": "Reuters / Just Security",
         "url": "https://www.justsecurity.org/155398/early-edition-august-27-2026/"
       },
       {
-        "headline": "Fresh Tanker Attack and Saudi Drone Swarm Underscore Gulf Volatility",
-        "body": "A new tanker attack was reported in the Strait of Hormuz on August 27, even as regional powers scrambled for an off-ramp from the six-month-old Iran war and Tehran dismissed the latest round of Trump administration sanctions. In a sign of spreading risk to Gulf energy infrastructure, Greek military personnel operating an air-defense system in Saudi Arabia intercepted a swarm of drones near Yanbu, home to major oil refining facilities. The overlapping incidents show the conflict still threatens one of the world's most critical oil and shipping corridors despite active diplomatic overtures.",
-        "source": "AP / Local10",
-        "url": "https://www.local10.com/news/2026/08/27/regional-powers-seek-off-ramp-from-iran-war-and-other-middle-east-developments/"
+        "headline": "Hezbollah Chief Rejects Lebanon Deal, Vows No 'Surrender' to Israel",
+        "body": "Hezbollah leader Naim Qassem publicly rejected the US-brokered framework agreement between Israel and Lebanon, declaring in a televised address on Al-Manar that his group refuses to surrender nearly six months after Hezbollah dragged Lebanon into the regional war by attacking Israel on March 2. Lebanese authorities say Israel's subsequent strikes and ground invasion have killed more than 4,300 people in Lebanon. Qassem's defiance complicates the direct Israel-Lebanon talks Washington has sponsored to try to formalize an end to hostilities.",
+        "source": "Times of Israel",
+        "url": "https://www.timesofisrael.com/liveblog-august-28-2026/"
       },
       {
-        "headline": "Gaza Strike Kills Former Hostage-Holder as Allies Blast Israeli Move on UNRWA Center",
-        "body": "The IDF confirmed a strike in Khan Younis killed Ismail Mohammed Ibrahim Barim, a Hamas commander who had previously held Israeli hostages Edan Alexander, Matan Zangauker and Avera Mengistu before their release, saying he had resumed attacks on troops and civilians in violation of the ceasefire. Separately, twelve countries -- eight of them EU members including Germany, Italy, Spain and Denmark -- condemned Israel's seizure this week of an UNRWA vocational training center in East Jerusalem's Kafr Aqab area near the Qalandiya refugee camp. The disputes unfolded alongside continued Israeli demolitions in Deir al-Balah and reports that settler violence in the West Bank is threatening to collapse the Palestinian economy.",
+        "headline": "Secret Israel-Hamas Channel Credited for Gaza Hostage Deal as Strikes Continue",
+        "body": "A previously undisclosed direct channel between Israeli officials and Hamas, approved at the prime ministerial level, is being credited with breaking the impasse that produced this week's hostage-deal breakthrough, according to a source familiar with the talks. Even so, the Israeli military said it killed Hamas and Islamic Jihad operatives in Gaza strikes on Thursday, including a Khan Younis strike that killed Ismail Mohammed Ibrahim Barim, a commander accused of holding hostages Edan Alexander, Matan Zangauker, and Avera Mengistu earlier in the war. Separately, twelve countries — eight of them EU members — condemned Israel's operation to dismantle an UNRWA vocational training center in East Jerusalem's Kafr Aqab area this week.",
         "source": "Times of Israel",
         "url": "https://www.timesofisrael.com/liveblog-august-27-2026/"
       }
@@ -153,81 +165,81 @@
     "techAI": {
       "aiCompetition": [
         {
-          "headline": "Anthropic Locks Up $45 Billion in UK-Backed Compute Capacity",
-          "body": "Anthropic has committed to a six-year, $45 billion deal to lease AI computing capacity from British infrastructure firm Nscale, covering roughly 460 megawatts tied to a West Virginia data center buildout. The capacity is expected to come online starting in late 2027 running Nvidia's next-generation Vera Rubin systems, and adds to Anthropic's already sprawling compute portfolio as it races to keep pace with demand for Claude and Claude Code. The scale of the multi-year bet shows frontier labs increasingly behaving like heavy industrial players, locking down power, land and chips years ahead of need rather than relying on spot capacity from hyperscalers.",
-          "source": "Tech Startups / Bloomberg News",
+          "headline": "Anthropic Locks In $45 Billion, Six-Year Compute Deal With UK Startup Nscale",
+          "body": "Anthropic has committed to spend $45 billion over six years renting AI computing capacity from British infrastructure firm Nscale, covering roughly 460 megawatts tied to a West Virginia data center buildout that will run on Nvidia's next-generation Vera Rubin systems starting in late 2027. The deal reflects how frontier labs are now behaving like energy-intensive industrial firms, locking down land, power, and chips years ahead of need rather than relying purely on hyperscaler partners. It also elevates Nscale, founded only in 2024, as a serious infrastructure counterpart to Amazon, Microsoft, and Google in the AI compute race.",
+          "source": "Tech Startups",
           "url": "https://techstartups.com/2026/08/27/top-tech-news-today-august-27-2026-amazon-apple-google-meta-nvidia-openai-salesforce-more/"
         },
         {
-          "headline": "OpenAI Rolls Out 'Frontier' Enterprise Agent Platform",
-          "body": "OpenAI began limited rollout on August 27 of a new enterprise offering called Frontier, aimed at organizations trying to deploy autonomous AI agents at scale, with wider availability planned over coming months. The company frames the launch around a growing gap between raw model capability and the organizational plumbing needed to run agents reliably in production, arguing that intelligence gains are no longer the bottleneck for enterprise AI leaders. The move intensifies competition among OpenAI, Anthropic and Google to own the emerging market for agentic workflows rather than just chat-style assistants.",
-          "source": "OpenAI",
-          "url": "https://openai.com/index/introducing-openai-frontier/"
+          "headline": "Chinese AI Firms Exploit Cloud Loophole to Reach Banned Nvidia Chips",
+          "body": "Chinese companies including Moonshot AI are reportedly obtaining compute from Nvidia's most advanced chips, including GB300s, through rented capacity at data centers in Southeast Asia rather than direct imports, sidestepping U.S. export bans since restrictions target chip ownership, not remote access. A researcher at the Institute for AI Policy and Strategy said this arrangement can be legal 'so long as Moonshot isn't actually buying and owning the physical hardware directly.' Lawmakers are now weighing the Remote Access Security Act to close the gap by regulating cloud-based access to controlled hardware, a step that would directly affect how Washington polices the AI compute race with Beijing.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/08/19/china-ai-nvidia-chips-us-export-controls.html"
         }
       ],
       "cyberEmerging": [
         {
-          "headline": "DOJ Disrupts China-Linked Hacking Network That Hit NASA, Fed, Senate",
-          "body": "The Justice Department announced it dismantled online infrastructure used by a Chinese state-sponsored group tracked as QTFY, which allegedly targeted NASA, the Federal Reserve, the Department of Energy and the U.S. Senate along with other critical infrastructure. In a joint operation with the FBI, authorities disabled two platforms the group used to conduct the intrusions, according to a Wednesday statement from the agency. The takedown underscores continued, wide-ranging Chinese cyber-espionage activity against core U.S. government functions even as Washington and Beijing manage a fragile trade and tech truce.",
-          "source": "Bloomberg",
-          "url": "https://www.bloomberg.com/news/articles/2026-08-27/us-says-china-linked-hackers-targeted-nasa-fed-and-senate"
+          "headline": "FBI, DOJ Seize Domains Tied to Chinese State-Linked Hacking Toolkit",
+          "body": "The Justice Department and FBI announced the seizure of domains connected to two hacking tools, QScan and QTRouter, developed by a Nanjing-based group called QTFY that court filings link to China's Ministry of State Security and the PLA. Investigators say QTFY sold intrusion services to paying clients and that the tools had been used against U.S. government networks for years before the takedown. The action marks one of the more direct U.S. law-enforcement strikes against Chinese state-sponsored cyber infrastructure in recent months.",
+          "source": "IT Security Newsletter (Cadre)",
+          "url": "https://blog.cadre.net/it-security-newsletter/it-security-newsletter-8-27-2026"
         },
         {
-          "headline": "CISA Red-Team Report Exposes Wide Gap in Infrastructure Cyber Defenses",
-          "body": "A new CISA advisory, AA26-237A and nicknamed 'A Tale of Two SOCs,' details red-team assessments run against a government services organization and a water utility using nearly identical attack methods, finding both were fully compromised at the domain level and had their sensitive business systems and cloud resources breached. The stark divergence in how each organization detected and responded to the intrusion highlights uneven readiness across critical infrastructure sectors even against known tradecraft. The findings arrive amid a broader wave of incidents this summer targeting U.S. water systems and, in the U.K., a power plant, reinforcing warnings that AI-assisted attack techniques are lowering the bar for disruptive operations against operational technology.",
-          "source": "The Hacker News / CISA",
-          "url": "https://thehackernews.com/"
+          "headline": "Russian APT28 Unit Hides Espionage Traffic Behind Microsoft Edge and Webhook Services",
+          "body": "Recorded Future's Insikt Group has documented a new campaign by BlueDelta, the Russian military-linked group also tracked as APT28, using webhook.site and Microsoft Edge to conceal a malware framework dubbed HOOKEDGE while targeting European government networks. The technique lets the group blend espionage command-and-control traffic with legitimate cloud and browser services, complicating detection by defenders. The disclosure adds to a string of Russian state-linked cyber operations against European governments amid the ongoing Ukraine war.",
+          "source": "Security Affairs",
+          "url": "https://securityaffairs.com/"
         }
       ]
     },
     "cities": {
       "lasVegas": [
         {
-          "headline": "Las Vegas Shatters Decade-Old Heat Record Amid Deadly AC Shortage",
-          "body": "Harry Reid International Airport hit a new daily record on Thursday, with the National Weather Service confirming the airport reached 111 degrees, topping the previous mark of 110 set in 2017. The extreme heat is compounding a public-health crisis: federal data show roughly 6,700 households across the Las Vegas metro area lack working air conditioning, and the Clark County coroner has linked the gap directly to heat deaths. An Extreme Heat Warning remained in effect through Friday evening as officials scramble to identify the most vulnerable neighborhoods.",
-          "source": "Las Vegas Review-Journal",
-          "url": "https://www.reviewjournal.com/"
+          "headline": "Reno's Hawk Fire Prompts Lombardo to Seek Federal Emergency Declaration",
+          "body": "Governor Joe Lombardo is pushing for a presidential emergency declaration after the Hawk Fire tore through the hills northwest of Reno, scorching 15,085 acres since igniting on August 22. The blaze forced evacuation orders or warnings for roughly 90,000 residents at its peak and destroyed homes, including one belonging to Crystal Hallock in northwest Reno. State officials are now racing to unlock federal disaster assistance as cleanup begins across the Truckee Meadows.",
+          "source": "Las Vegas Sun",
+          "url": "https://lasvegassun.com/news/breakingnews/"
         },
         {
-          "headline": "Metro Police Open Homicide Probe After Two Women Found Dead",
-          "body": "Las Vegas police launched a homicide investigation early Friday after two people were found dead near the 5000 block of Reno Avenue on Thursday night. Preliminary findings indicate a man shot two women before turning the gun on himself, according to investigators. The case adds to a string of violent-crime headlines this week in the valley.",
+          "headline": "911 Records Surface in Fatal Shooting of Metro Officer Abdelnabi",
+          "body": "Newly released 911 call transcripts are shedding light on prior police contacts involving the man accused of fatally shooting Las Vegas Metro Officer Austin Abdelnabi. The records, made public Friday, are expected to factor heavily into the ongoing investigation and any future prosecution. Metro has not yet detailed how the prior encounters may have influenced department response protocols.",
           "source": "Las Vegas Review-Journal",
-          "url": "https://www.reviewjournal.com/"
+          "url": "https://www.reviewjournal.com/local/"
         },
         {
-          "headline": "Nevada Could Collect $256 Million From Meta's $17 Billion Teen Social-Media Settlement",
-          "body": "Meta has agreed to pay $17 billion and implement new child-safety measures on Facebook and Instagram to resolve a multistate trial over teen social media addiction, with 47 state attorneys general — including Nevada's — announcing the deal this week. Nevada's share of the settlement is estimated at $256 million, money that could flow toward youth mental-health and digital-safety programs in Clark County schools. The settlement caps years of litigation alleging the platforms knowingly designed addictive features targeting minors.",
+          "headline": "Officer-Involved Shooting Near College of Southern Nevada Under Investigation",
+          "body": "Las Vegas police shot and wounded an 'agitated' woman who was reportedly armed with a weapon early Friday morning near the College of Southern Nevada in the west valley. The incident remains under active investigation, with authorities yet to release the woman's condition or full details of the confrontation. It marks at least the second high-profile police use-of-force incident in the valley this week.",
           "source": "Las Vegas Review-Journal",
-          "url": "https://www.reviewjournal.com/news/"
+          "url": "https://www.reviewjournal.com/local/"
         }
       ],
       "nellis": [
         {
-          "headline": "Creech AFB Pushes Autonomous Drone Wingmen Closer to Combat Readiness",
-          "body": "At Creech Air Force Base, the Air Force's Collaborative Combat Aircraft Experimental Operations Unit recently ran an Agile Combat Employment exercise designed to test how far semi-autonomous drone technology has advanced under realistic field conditions. The drill put uncrewed platforms, including YFQ-44A Fury aircraft, through operational scenarios meant to validate how these 'loyal wingman' drones would fight alongside crewed fighters. The Nevada desert continues to serve as the Air Force's proving ground for next-generation unmanned combat aircraft ahead of wider fleet integration.",
-          "source": "Air Force News Service / af.mil",
-          "url": "https://www.af.mil/News/Article-Display/Article/4557390/air-force-tests-collaborative-combat-aircraft-at-creech-afb/"
+          "headline": "Air Force Pushes Autonomous Wingman Drones Through Trials at Creech",
+          "body": "The Air Force's Collaborative Combat Aircraft Experimental Operations Unit has been putting semi-autonomous drone wingmen through their paces at Creech Air Force Base during a recent Agile Combat Employment exercise. The testing reflects the service's broader push to field AI-piloted aircraft that can fly alongside crewed fighters in contested environments. Creech, alongside Nellis and the Nevada Test and Training Range, remains the Air Force's primary proving ground for next-generation unmanned combat technology.",
+          "source": "Nellis Air Force Base Public Affairs",
+          "url": "https://www.nellis.af.mil/Nellis-News/Article-Display/Article/4556808/air-force-tests-collaborative-combat-aircraft-at-creech/"
         }
       ]
     },
     "feelGood": [
       {
-        "headline": "Carmel Community Rallies to Honor Veterans With Thousands of Small Kindnesses",
-        "body": "A veterans museum in Carmel, Indiana held an Acts of Kindness Day tied to a community-wide goal set by local Kiwanis and Rotary clubs to log 1,976 individual acts of kindness. Visitors sat with veterans to record memories of kindness given and received during their service, and nearly a dozen handmade thank-you cards were written for specific veterans on the spot. Local business owner Jessica Bricking of Carmel Glass & Mirror capped the day with a $500 donation to keep the all-volunteer museum running.",
-        "source": "Current in Carmel / The Reporter",
-        "url": "https://readthereporter.com/kindness-stories-handmade-cards-community-generosity/"
+        "headline": "Devoted Volunteer's Repeat Shelter Visits Finally Land Grieving Dog a Home",
+        "body": "A black-and-white pit bull mix named Nancy spent months without a single adoption inquiry after her owner passed away, sinking into visible depression behind her kennel bars. A content creator known online as Rachel began visiting Nancy week after week, refusing to give up on her even as other shelter dogs came and went. The persistence paid off when Nancy was finally adopted, turning a quiet shelter corner into a story of patience and second chances.",
+        "source": "GreaterGood",
+        "url": "https://greatergood.com/blogs/news/cw-how-consistent-compassion-sparked-a-shelter-dog-adoption-miracle"
       },
       {
-        "headline": "Rescue Dogs and Veterans Healing Together in Arizona",
-        "body": "Soldier's Best Friend, an Arizona nonprofit, continues pairing military veterans coping with PTSD or traumatic brain injuries with trained service and companion dogs, many of them rescued from local animal shelters. The program's design means every match saves two lives at once — a struggling veteran and a homeless dog — while building bonds that organizers say ripple outward to inspire entire communities. Staff and veteran volunteers have been sharing firsthand stories of the program's impact in recent interviews.",
-        "source": "Soldier's Best Friend",
-        "url": "https://soldiersbestfriend.org/"
+        "headline": "Veteran Tickets Foundation Nears Its 2026 Goal of Granting Every Hero's Wish",
+        "body": "The nonprofit Veteran Tickets Foundation, known as Vet Tix, reports that donors have contributed $175,000 toward its 2026 goal of fulfilling 100 percent of requested 'Hero's Wishes' for currently serving military members, veterans and Gold Star families. The organization provides free event tickets to concerts, sports and shows as a small gesture of gratitude for service and sacrifice. The steady flow of donations shows public appreciation for military families remains strong even amid broader economic pressures.",
+        "source": "Vet Tix",
+        "url": "https://www.vettix.org/"
       },
       {
-        "headline": "Nellis Airmen Open Base to Foster Teens for a Day of Mentorship",
-        "body": "The 857th Aircraft Maintenance Squadron at Nellis Air Force Base hosted 'Airman for a Day,' a base tour and mentorship event for local foster teens ages 14 to 17. The program exposed the teens to Air Force careers and culture, giving young people who often lack stable family support a rare glimpse of structured opportunity and camaraderie. Organizers said the goal was to foster a sense of belonging and purpose among youth who need it most.",
-        "source": "DVIDS / Nellis Air Force Base",
-        "url": "https://www.dvidshub.net/unit/NAFB"
+        "headline": "Strangers' Small Gestures Give Homeless Guests Reason to Hope in Colorado Springs",
+        "body": "At Springs Rescue Mission, guests marked Random Acts of Kindness Day by recounting moments when strangers changed their outlook, including one man who broke down in tears after someone unexpectedly handed him a coat on the street. Another guest described a night he and his wife were out of food when a nearby coffee shop began setting out leftover sandwiches just as they wondered where their next meal would come from. Shelter staff say these small, unplanned acts of generosity often do as much for morale as formal aid programs.",
+        "source": "Springs Rescue Mission",
+        "url": "https://www.springsrescuemission.org/articles/random-acts-of-kindness-day-guests-tell-stories-of-help-and-hope"
       }
     ],
     "onThisDay": [
@@ -237,30 +249,30 @@
       },
       {
         "year": "1955",
-        "event": "Fourteen-year-old Emmett Till was abducted from his relatives' home in Mississippi, a killing that helped galvanize the civil rights movement."
+        "event": "Fourteen-year-old Emmett Till was abducted in Mississippi, a killing that galvanized the civil rights movement."
       },
       {
         "year": "1988",
-        "event": "Three Italian jets collided during an air show at Ramstein Air Base in West Germany, killing 70 spectators and pilots."
+        "event": "A mid-air collision during the Ramstein air show in West Germany killed 70 people and injured hundreds."
       },
       {
         "year": "1996",
-        "event": "Britain's Prince Charles and Princess Diana finalized their divorce."
+        "event": "The divorce of Prince Charles and Princess Diana was formally finalized in London."
       }
     ]
   },
   "topPicks": [
     {
-      "headline": "Iran war costs push US Navy into fiscal emergency, internal memos show",
-      "teaser": "Internal Navy memos reveal Iran war spending has triggered a budget crisis threatening fleet readiness and future procurement."
+      "headline": "Trump Abandons Iran Truce Framework as War Grinds Into Seventh Month",
+      "teaser": "Collapse of the truce framework signals an escalating, protracted conflict with major regional and global security implications."
     },
     {
-      "headline": "Russia Launches Fresh Wave of Over 100 Attack Drones Overnight",
-      "teaser": "A massive overnight drone barrage on Ukraine underscores escalating attacks as the war grinds on with no resolution in sight."
+      "headline": "PLA Missile Test Adds Nuclear Second-Strike Capability to Taiwan Pressure Campaign",
+      "teaser": "China's expanding nuclear posture around Taiwan raises the stakes of a potential great-power confrontation in Asia."
     },
     {
-      "headline": "Taiwan Runs Largest-Ever Invasion-Response Drills, Borrowing U.S. Playbook",
-      "teaser": "Taiwan's unprecedented invasion-response exercises signal rising tensions and deeper military coordination with Washington against a Chinese threat."
+      "headline": "Russia Pummels Kyiv and Central Ukraine in Hours-Long Drone Barrage",
+      "teaser": "A massive drone assault underscores the war's continued intensity and its toll on Ukrainian civilians and infrastructure."
     }
   ]
 }
