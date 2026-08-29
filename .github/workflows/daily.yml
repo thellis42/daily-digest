@@ -2,7 +2,7 @@ name: Daily Digest
 
 on:
   schedule:
-    - cron: "0 12 * * *"   # 12:00 UTC — ~05:00 PDT / ~04:00 PST (once daily)
+    - cron: "0 10 * * *"   # 10:00 UTC — ~03:00 PDT / ~02:00 PST (once daily)
   workflow_dispatch: {}      # manual run — build anytime
 
 permissions:
