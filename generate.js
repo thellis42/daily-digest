@@ -15,6 +15,17 @@ const MAX_SEARCHES = Number(process.env.MAX_SEARCHES || 5); // per grouped call 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const now = new Date();
 
+// ---- build at most once per Pacific day (extra backup-cron triggers exit for free) ----
+const FORCE = process.env.FORCE === "true"; // manual runs bypass the guard
+const dateKeyGuard = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "America/Los_Angeles",
+  year: "numeric", month: "2-digit", day: "2-digit",
+}).format(now);
+if (!FORCE && fs.existsSync(path.join(DATA, `${dateKeyGuard}.json`))) {
+  console.log(`Digest for ${dateKeyGuard} already built today. Skipping.`);
+  process.exit(0);
+}
+
 // ---- dates & timestamp (Pacific) ----
 const humanDate = new Intl.DateTimeFormat("en-US", {
   timeZone: "America/Los_Angeles",
