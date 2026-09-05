@@ -2,9 +2,9 @@ name: Daily Digest
 
 on:
   schedule:
-    - cron: "17 13 * * *"   # 13:17 UTC — first attempt
-    - cron: "47 13 * * *"   # 13:47 UTC — backup if the first was delayed/skipped
-    - cron: "12 14 * * *"   # 14:12 UTC — final backup (still before the 14:30 winter cutoff)
+    - cron: "17 09 * * *"   # 13:17 UTC — first attempt
+    - cron: "47 09 * * *"   # 13:47 UTC — backup if the first was delayed/skipped
+    - cron: "12 10 * * *"   # 14:12 UTC — final backup (still before the 14:30 winter cutoff)
   workflow_dispatch: {}      # manual run — build anytime
 
 permissions:
