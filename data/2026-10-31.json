@@ -1,0 +1,278 @@
+{
+  "date": "Saturday, October 31, 2026",
+  "generatedAt": "Sat, Oct 31, 8:19 AM PDT",
+  "breaking": {
+    "headline": "White House Reportedly Preparing New Iran Strikes for Day After Midterms",
+    "body": "Multiple outlets reported Friday that the Trump administration has told Gulf allies to prepare for a short, intense bombing campaign against Iran that could begin as soon as November 4, the day after the US midterm elections. CENTCOM commander Adm. Brad Cooper briefed President Trump in person on strike options Thursday with Defense Secretary Pete Hegseth and Joint Chiefs Chairman Gen. Dan Caine present, following a Wednesday session with Vice President JD Vance and military leaders. Axios reported separately that a poor midterm showing could push Trump toward a larger operation, even as Qatar mediates stalled Doha talks over nuclear-site inspections and sanctions relief. Hegseth and Secretary of State Marco Rubio reportedly favor further military pressure on Tehran, while Vance, Steve Witkoff and Jared Kushner are pushing to keep negotiations alive.",
+    "source": "Haaretz",
+    "url": "https://www.haaretz.com/middle-east-news/2026-10-31/ty-article/report-trump-planning-to-resume-iran-strikes-as-soon-as-one-day-after-midterms/000001a1-908c-d03f-aded-daffa1180000"
+  },
+  "tabs": {
+    "defense": {
+      "defense": [
+        {
+          "headline": "Pentagon Acquisition Chief Pushes Services to Test Legal Limits on Program Control",
+          "body": "In an October 19 memo, Under Secretary of War for Acquisition and Sustainment Michael Duffey directed the military services to empower portfolio acquisition executives to take direct control of programs, resources and personnel and to challenge acquisition rules they view as overly restrictive. The memo also instructs officials to flag statutory barriers that may need legislative fixes, and separately states that contractor profits from manufacturing efficiency gains on fixed-price deals should not automatically count as evidence of waste. The guidance reflects a broader fall push inside the Pentagon to speed weapons development and reward private investment in production capacity.",
+          "source": "Inside Defense",
+          "url": "https://insidedefense.com/insider/insider-daily-digest-october-30-2026"
+        },
+        {
+          "headline": "Pentagon, Hill Quietly Scale Back FY2027 Budget Toward $1.1 Trillion",
+          "body": "Despite the administration's public $1.5 trillion defense budget request, Pentagon officials and congressional spending committees are privately drafting a smaller topline of roughly $1.1 trillion for fiscal 2027, according to reporting Friday from Just Security's Early Edition. One source described the gap between the public figure and the real number as something the Pentagon cannot openly acknowledge. The disclosure follows reports that Hegseth himself asked a Republican lawmaker this summer about the odds Congress would actually pass the full $1.5 trillion request, suggesting doubts about the number even inside the administration.",
+          "source": "Just Security",
+          "url": "https://www.justsecurity.org/162627/early-edition-october-30-2026/"
+        },
+        {
+          "headline": "NATO Launches Overhaul of Missile-Defense Battle Management Software",
+          "body": "NATO is moving to replace the software that manages ballistic-missile-defense operations alliance-wide, acknowledging current systems cannot perform all the functions required by its planned future architecture. The acquisition effort aims to field an initial new capability by 2028 as the alliance works to close gaps amid growing Russian missile threats. The push comes even as the Pentagon has reportedly asked several NATO members to tone down public rhetoric about the Russian threat, arguing some statements risk undermining continental security messaging.",
+          "source": "Inside Defense",
+          "url": "https://insidedefense.com/insider/insider-daily-digest-october-28-2026"
+        }
+      ],
+      "acquisitions": [
+        {
+          "headline": "Air Force Awards Lockheed $694M to Begin Hypersonic ARRW Missile Production",
+          "body": "The Air Force issued Lockheed Martin a $694 million contract this week to begin production of the AGM-183A Air-launched Rapid Response Weapon, marking the formal end of the hypersonic missile's prototyping and flight-test phase. The award, made under the Pentagon's Enterprise-Wide Agile Acquisition Contract, covers the service's first fielded hypersonic weapon, designed to exceed Mach 5 and strike heavily defended targets from standoff range.",
+          "source": "ExecutiveGov",
+          "url": "https://www.executivegov.com/articles/lockheed-martin-air-force-arrw-production-contract"
+        },
+        {
+          "headline": "Army, Lockheed Structure $1.08B Future Interceptor Deal Around Shared Risk",
+          "body": "The Army signed a new-style development agreement with Lockheed Martin for its Future Interceptor program, combining $660.4 million in government funding with a $423 million contractor cost-share for a total of about $1.08 billion. The deal establishes a development and test pathway rather than a guaranteed production commitment, illustrating a broader shift in how the Pentagon is structuring risk-sharing on next-generation missile-defense programs.",
+          "source": "Defense Tech Intelligence Brief",
+          "url": "https://edsnews.substack.com/p/defense-tech-intelligence-brief-october-6d9"
+        }
+      ]
+    },
+    "us": [
+      {
+        "headline": "DOJ Escalates Alaska Senate Ballot Fight, Confirms Criminal Probe Into 'Spoiler' Candidate",
+        "body": "The U.S. Attorney in Anchorage, Michael Heyman, confirmed Friday that a criminal investigation has been underway for months into allegations that Democrats recruited a second candidate named Dan Sullivan to siphon votes from the Republican incumbent senator in Alaska's toss-up race. Separately, DOJ lawyers asked a federal judge to order state officials to preserve and segregate all ballots ranking the spoiler candidate, arguing there is a 'substantial risk' those votes could be invalidated. Democratic nominee Mary Peltola has denied any knowledge of the scheme, while President Trump has publicly pushed for her prosecution and directed DOJ to sue to block certification if she defeats Sen. Dan Sullivan on Tuesday.",
+        "source": "Associated Press via PBS NewsHour",
+        "url": "https://www.pbs.org/newshour/politics/top-federal-prosecutor-in-alaska-says-criminal-probe-underway-over-would-be-spoiler-senate-candidate"
+      },
+      {
+        "headline": "Federal Judge Blocks Trump Administration's Threats Against Election Workers",
+        "body": "U.S. District Judge Trina Thompson in the Northern District of California issued a temporary restraining order Friday halting what she described as an administration plan to intimidate state and local election officials with threats of criminal prosecution. The ruling found the actions likely violate the Voting Rights Act and multiple constitutional provisions just days before the November 3 midterms. The decision adds to a string of last-minute legal clashes over election administration as both parties brace for a close fight for control of Congress.",
+        "source": "Resistance News Digest",
+        "url": "https://resistancenewsdigest.substack.com/p/october-31-2026-hold-on-were-almost"
+      },
+      {
+        "headline": "Trump Dangles $1 Million Bounty for Voter Fraud Tips Days Before Election",
+        "body": "President Trump posted on Truth Social that anyone reporting voter fraud from past elections or the 2026 midterms would receive $1 million once the perpetrators are arrested and convicted. No congressional funding has been authorized for such payments, and the administration has not explained how the program would be financed or administered. The announcement comes amid heightened tension between the White House and state election officials just days before Tuesday's vote.",
+        "source": "Resistance News Digest",
+        "url": "https://resistancenewsdigest.substack.com/p/october-31-2026-hold-on-were-almost"
+      },
+      {
+        "headline": "Fed Holds Rates Steady as Tech Selloff and Data Gaps Cloud Outlook",
+        "body": "The Federal Reserve voted 10-2 on October 28 to hold its benchmark rate at 3.75%-4%, with Governor Lisa Cook and Cleveland Fed President Beth Hammack dissenting in favor of an immediate hike. Chair Kevin Warsh kept the door open to a December move while third-quarter GDP came in at a strong 3.4% annualized pace, even as core PCE inflation held at 3.1% year-over-year. Markets wobbled afterward, with the Nasdaq dropping roughly 1.4% on October 30 after weak earnings and guidance from Amazon and Intel dragged down AI and chip stocks.",
+        "source": "Charles Schwab / Rio Times",
+        "url": "https://www.riotimesonline.com/global-economy-briefing-october-30-2026/"
+      }
+    ],
+    "pacific": {
+      "pacificCommand": [
+        {
+          "headline": "North Korea Fires Missile Salvo After Seoul's Talks Offer",
+          "body": "North Korea fired roughly ten short-range ballistic missiles from the Wonsan area into the Sea of Japan on Oct. 29, with the weapons traveling about 250 kilometers, hours after Seoul renewed an offer for military talks to calm border tensions stemming from a recent landmine incident. Pyongyang has not responded to the dialogue proposal, and the launch coincided with Kim Jong Un touring a drone-technology exhibition showcasing new unmanned systems. Washington, Seoul and Tokyo are jointly analyzing the missiles' specifications, while Japan said the projectiles fell outside its exclusive economic zone.",
+          "source": "NK News / USNI News",
+          "url": "https://www.nknews.org/2026/10/north-korea-fires-unidentified-projectile-toward-sea-rok-military/"
+        },
+        {
+          "headline": "US, Japan, Australia, Philippines Deepen First Island Chain Cooperation",
+          "body": "On the sidelines of the ASEAN Defense Ministers' Meeting-Plus in Cebu on Oct. 28-29, US Defense Secretary Pete Hegseth met with counterparts from Japan, Australia and the Philippines and agreed to tighten military coordination along the First Island Chain running from Japan through Taiwan to the Philippines. Australian Defense Minister Richard Marles said the four discussed possible joint infrastructure investment on Luzon and Mindanao and closer logistics integration, though no new funding commitments were announced. Hundreds of Australian troops already took part in this year's Balikatan exercise, with more American personnel expected to join next year's Philippines-Australia Exercise Alon.",
+          "source": "The Epoch Times",
+          "url": "https://www.theepochtimes.com/world/us-japan-australia-and-philippines-agree-to-expand-defense-cooperation-at-asean-meeting-6110503"
+        },
+        {
+          "headline": "India Reinforces 'JAI' Trilateral With Japan and Australia",
+          "body": "At the same Cebu summit, Indian Defence Minister Rajnath Singh pushed forward the 'JAI' (Japan-Australia-India) grouping, holding separate bilateral talks with Japan's Shinjiro Koizumi and Australia's Richard Marles on expanding defense cooperation. Singh also used a meeting with the US defense chief to press concerns over Washington's support package for Pakistan's F-16 fleet, a reminder of friction even among Indo-Pacific partners. The diplomacy comes as India, the US, Australia and Japan prepare to hold this year's Malabar naval exercise.",
+          "source": "Indian Defence News / Next IAS",
+          "url": "https://www.indiandefensenews.in/2026/10/jai-rajnath-singh-reinforces-indias.html"
+        }
+      ],
+      "pacingThreat": [
+        {
+          "headline": "PLA Purge Deepens, Shrinks Military Commission to Two Members",
+          "body": "China's fifth plenum confirmed the expulsion of 16 more generals and defense-industry executives from the Communist Party, extending a corruption crackdown that has now swept through PLA theatre commands and the former nuclear, aerospace and shipbuilding leadership. The uniformed ranks of the Central Military Commission have shrunk to just two serving members, Xi Jinping and Zhang Shengmin, after earlier purges removed other vice-chairmen this year. Analysts expect Beijing to begin refilling the vacated PLA seats on the Politburo and Central Committee in the coming months.",
+          "source": "South China Morning Post",
+          "url": "https://www.scmp.com/news/china/military/article/3372704/china-widens-pla-anti-graft-campaign-expelling-corporate-chiefs-16-generals-party"
+        },
+        {
+          "headline": "Chinese Aircraft and Coast Guard Pressure Japan and Philippines",
+          "body": "Japan's Air Self-Defense Force scrambled fighters this week after detecting a Chinese Y-9 intelligence-gathering aircraft operating over the East China Sea and into the Pacific, part of what Tokyo describes as a steady increase in Chinese flights aimed at opening naval transit routes beyond the first island chain. Separately, China's coast guard has been rehearsing water-cannon and drone tactics near the disputed Second Thomas and Sabina shoals, sustaining pressure on Philippine resupply missions. A Japanese destroyer and patrol aircraft also shadowed Chinese naval vessels near Japan this week.",
+          "source": "South China Morning Post",
+          "url": "https://www.scmp.com/news/china"
+        },
+        {
+          "headline": "Taiwan Grounds Apache Fleet as Budget Fight Meets Invasion Warnings",
+          "body": "Taiwan's Defense Ministry grounded its AH-64E Apache attack helicopters this week after a US technical notice flagged gearbox risks, Minister Wellington Koo told lawmakers, forcing the army to arrange interim workarounds pending inspections. The glitch lands as Taiwan's legislature races to pass a roughly NT$608 billion supplementary budget blending new defense and welfare spending before the Nov. 28 local elections. The disruption also comes amid fresh warnings from US Army Pacific planners about the possibility of a Chinese move against Taiwan as early as next year.",
+          "source": "Taipei Times / Taiwan News",
+          "url": "https://www.taipeitimes.com/News/taiwan"
+        }
+      ]
+    },
+    "europe": {
+      "ukraineRussia": [
+        {
+          "headline": "Ukraine Ends Refinery Strike Pause, Russia Hits Dnipro Rail Station Again",
+          "body": "Kyiv broke its two-week moratorium on long-range strikes by hitting the Novokuibyshevsk oil refinery deep in Russia's Samara region on October 30, roughly 490 miles from the border, with Moscow claiming three refineries and a gas-chemical plant were struck. Russia retaliated by hitting a Dnipro railway station for the second straight day, killing at least 14 people after an earlier strike killed 15, while a separate barrage knocked out power to more than 350,000 Ukrainians. Russian officials are reportedly trying to use the renewed refinery strikes to drive a wedge between Kyiv and Washington.",
+          "source": "Kyiv Independent / CFR",
+          "url": "https://kyivindependent.com/"
+        },
+        {
+          "headline": "Ukraine Claims Record Monthly Russian Casualties, Touts Underground Raid",
+          "body": "Ukraine's General Staff says Russian dead and wounded hit roughly 49,040 in October, a new monthly high that nearly meets Zelensky's year-end goal of 50,000 casualties a month. Separately, Ukraine's Khartiia Corps says its 'Operation Veles' pushed troops nearly 10 miles through pipelines and tunnels to strike Russian positions from behind, killing or wounding about 100 soldiers and capturing 30 near the front. Kyiv also says it damaged five Russian chemical plants this week that produce solid rocket propellant for missiles.",
+          "source": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/10/30/ukraine-invests-in-firepower-as-it-inflicts-a-new-russian-casualty-record"
+        }
+      ],
+      "europe": [
+        {
+          "headline": "Allies Fear Trump Will Sit on Patriot Deliveries Until After Midterms",
+          "body": "NATO diplomats tell reporters they have no clarity on when roughly 500 newly approved Patriot interceptors for Ukraine will actually ship, with one source calling the war a political 'stone in the boot' for Washington. Secretary General Mark Rutte is pressing allies like Greece and Spain, which hold older PAC-2 stocks, to send systems bilaterally since a licensed Ukrainian production line isn't expected to deliver units until December 2026 or January 2027 at the earliest. A separate US-brokered plan to let Ukraine build Patriots under license, announced at July's Ankara summit, has also stalled.",
+          "source": "Euronews",
+          "url": "https://www.euronews.com/2026/10/29/nato-allies-fear-trump-will-delay-patriot-missiles-for-ukraine-until-after-us-midterms"
+        },
+        {
+          "headline": "France's Economy Shrinks as Cost-of-Living Protests Sweep the Continent",
+          "body": "French GDP unexpectedly contracted 0.1% in the third quarter even as the eurozone as a whole grew 0.4%, beating forecasts, with Germany up 0.2%, Italy flat and Spain up 0.6%. France's troubles are compounding a budget crisis, with debt near 120% of output and the 2026 deficit projected at 5.4% of GDP, well above the EU's 3% ceiling, while roughly 800,000 people marched nationwide, including 250,000 in Paris. Germany and Italy saw parallel cost-of-living demonstrations the same weekend, prompting large police deployments amid fears of further unrest.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/30/euro-zone-gdp-france.html"
+        }
+      ]
+    },
+    "middleEast": [
+      {
+        "headline": "UN Warns Israel's Gaza 'Yellow Line' Has Become a 'Kill Zone'",
+        "body": "The UN human rights office says Israeli forces have continued pushing the so-called yellow line westward in Gaza, now controlling roughly 65% of the Strip, up from about 53% when the October 2025 ceasefire began, squeezing some 2.1 million residents into a shrinking area. Monitors recorded fresh displacement in Al-Shujaiyeh this week alongside at least two strikes on makeshift camps and demolitions of remaining structures, feeding concerns voiced by OHCHR about ethnic cleansing. The Israeli military says it has continued targeted strikes, including killing a Hamas commander it says held hostages and four other operatives in the south.",
+        "source": "UN News",
+        "url": "https://news.un.org/en/audio/2026/10/1168709"
+      },
+      {
+        "headline": "Lebanese Cabinet Splits Over Hezbollah Explosives Case as Trump Floats Accords Deal",
+        "body": "At least four Lebanese ministers boycotted a cabinet session this week to protest delays in referring Hezbollah to the Judicial Council over an alleged attempt to smuggle hundreds of kilograms of explosives into Beirut, a case that has already produced indictments against eight people. Separately, US President Trump reportedly pledged to a Gulf diplomatic contact that he would push for a full Israeli troop withdrawal from southern Lebanon if Beirut agrees to join the Abraham Accords. Israeli forces continue sporadic shelling in southern Lebanese towns despite the broader ceasefire framework.",
+        "source": "FDD Overnight Brief",
+        "url": "https://www.fdd.org/overnight-brief/october-30-2026/"
+      },
+      {
+        "headline": "US Pulls Non-Emergency Staff From Saudi Arabia as Pakistan Pushes Iran Mediation",
+        "body": "Washington ordered non-emergency personnel out of Saudi Arabia on October 30 citing unspecified security risks, a move that lands as the eight-month-old Iran war grinds on. Pakistan's army chief, Field Marshal Asim Munir, has visited Tehran twice this month as the country's lead mediator trying to de-escalate the conflict, with Pakistani officials describing themselves as 'cautiously optimistic.' Meanwhile Vance has reportedly offered to meet former IRGC commander Mohsen Rezaei, who US intelligence believes stays in regular contact with Iran's leadership, as the Pentagon preps additional strike options.",
+        "source": "Jerusalem Post",
+        "url": "https://www.jpost.com/middle-east"
+      }
+    ],
+    "techAI": {
+      "aiCompetition": [
+        {
+          "headline": "Mistral Releases Trillion-Parameter Open-Weight Model, Challenging US and Chinese Labs",
+          "body": "French AI lab Mistral released the open weights for Mistral Large 4 on October 29, a natively multimodal, roughly one-trillion-parameter flagship it had been previewing since early October. A quantized checkpoint is already available for self-hosting, with the main release pegged for October 31, positioning Europe's leading lab as a credible open-weight alternative to Meta, Google and Chinese developers like DeepSeek. The move intensifies a three-way global race over who controls the most capable freely downloadable AI systems.",
+          "source": "DEV Community",
+          "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-october-30-2026-mistral-opens-a-trillion-parameters-cloud-giants-report-openai-1gk7"
+        },
+        {
+          "headline": "Anthropic Files for Nasdaq IPO Targeting Up to $2 Trillion Valuation",
+          "body": "Anthropic filed its S-1 with the SEC on October 26 to list on the Nasdaq under ticker 'ANT,' with a debut reportedly targeted for the week of November 16. The filing shows first-half 2026 revenue of $16.3 billion, up roughly 1,300% from $1.16 billion a year earlier, alongside an $80.7 billion net loss driven largely by non-cash revaluation of convertible notes. Bankers are reportedly discussing a valuation between $1.5 trillion and $2 trillion, which would make it one of the largest tech listings ever and a major marker of how capital markets are pricing the frontier-AI race against OpenAI.",
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/26/anthropic-ipo-live-updates-ai-s-1-filing.html"
+        }
+      ],
+      "cyberEmerging": [
+        {
+          "headline": "China-Linked Hackers Used AI Agents to Hit 200+ Organizations in 11 Days",
+          "body": "CrowdStrike disclosed on October 29 that a Chinese state-linked group it tracks as Vapor Panda used an agentic AI penetration-testing framework called ARTEX, running primarily on DeepSeek alongside a second commercial model, to target more than 200 organizations across at least 14 countries beginning October 17. The campaign hit government agencies, defense contractors, pharmaceutical, semiconductor and nuclear-sector targets, with confirmed post-exploitation at nine victims including two in the US. CrowdStrike's threat-intel chief called it the first time the group has used agentic AI at this scale, noting such AI-driven attacks nearly tripled month over month, from about 45 in September to 126 in October.",
+          "source": "CyberScoop",
+          "url": "https://cyberscoop.com/china-vapor-panda-agentic-ai-artex-campaign-crowdstrike"
+        },
+        {
+          "headline": "New York Enacts Strict Limits on AI Chatbots' Interactions With Minors",
+          "body": "New York signed legislation on October 28 restricting what AI chatbots can say to users under 18, barring bots from claiming to be human, promoting self-harm, or generating sexual content for minors. The rules apply by default to every user unless a company verifies the person is an adult, making New York among the most aggressive states regulating conversational AI safety. The law adds to a growing patchwork of state-level AI governance as federal rules remain stalled, raising compliance stakes for major chatbot developers.",
+          "source": "AI News (Russ McGuire)",
+          "url": "https://aisdg.substack.com/p/ai-news-for-october-30-2026"
+        }
+      ]
+    },
+    "cities": {
+      "lasVegas": [
+        {
+          "headline": "Deadly Flash Flooding Hits Henderson During Friday Storm",
+          "body": "A fast-moving storm dumped up to 1.75 inches of rain on parts of Henderson Friday afternoon, triggering three simultaneous swift-water rescues and one fatality. Henderson Fire crews pulled people from flooded areas along Lake Mead Parkway and near Milan and Drake streets, while a victim rescued from a wash near North Pueblo Boulevard went into cardiac arrest and died at a hospital. The National Weather Service had issued a flash flood warning for eastern Henderson and the Lake Las Vegas area as rainfall rates spiked to about half an inch in just 30 minutes, with some gauges recording over 1.5 inches total.",
+          "source": "FOX5 Las Vegas / KTNV",
+          "url": "https://www.fox5vegas.com/2026/10/31/1-dead-after-henderson-fire-crews-respond-3-water-rescues/"
+        },
+        {
+          "headline": "Former Henderson Detective Indicted on Federal Smuggling Charges",
+          "body": "A former Henderson police detective has been indicted on four federal counts alleging he encouraged illegal entry and transported and harbored an undocumented immigrant. The case marks a sharp fall for a once-trusted local officer and lands amid heightened scrutiny of Southern Nevada law enforcement this fall. Prosecutors have not released a trial timeline.",
+          "source": "Las Vegas Review-Journal",
+          "url": "https://www.reviewjournal.com/"
+        },
+        {
+          "headline": "Nevada Highway Patrol Investigates Officer-Involved Shooting on Boulder Highway",
+          "body": "Nevada Highway Patrol is investigating an officer-involved shooting Friday near Boulder Highway and Sahara Avenue, a busy corridor on the eastern side of the valley. Authorities have not yet released details on what led to the shooting or the condition of those involved. The incident adds to a string of police-involved shootings under review in Clark County this year.",
+          "source": "Las Vegas Review-Journal",
+          "url": "https://www.reviewjournal.com/"
+        }
+      ],
+      "nellis": [
+        {
+          "headline": "Nellis Airmen Sharpen Combat Trauma Skills at UMC",
+          "body": "Nellis Air Force Base continues to rotate 75 to 100 medical personnel through University Medical Center's trauma unit on any given day, a partnership running more than a decade that lets Air Force doctors, nurses and Critical Care Air Transport Teams train on injuries resembling combat wounds. UMC leaders say the arrangement, spotlighted in new reporting this week, both sharpens military medical readiness and bolsters the hospital's staffing. The partnership comes as Nellis separately moves forward on a 1.057 billion dollar 'F-47 Future Campus' to support testing of the Air Force's next-generation fighter, with contractor bids due by February 2027 and construction stretching toward 2031.",
+          "source": "FOX5 Las Vegas / The Aviationist",
+          "url": "https://www.fox5vegas.com/2026/10/30/nellis-air-force-base-medical-staff-continue-gaining-experience-umc-treat-combat-injuries/"
+        }
+      ]
+    },
+    "feelGood": [
+      {
+        "headline": "Halloween Yard Displays Raise 1.2 Million Dollars for St. Jude",
+        "body": "What began as one North Carolina family's over-the-top spooky yard display has grown into a nationwide fundraising movement, with more than 600 households across the country now decorating their homes each October to benefit St. Jude Children's Research Hospital. Started by Jeff Robertson of Holly Springs, the informal network has raised nearly 1.2 million dollars to date and is now pushing toward a 2 million dollar goal.",
+        "source": "Good Good Good",
+        "url": "https://www.goodgoodgood.co/articles/good-news-this-week-october-31-2026"
+      },
+      {
+        "headline": "Texas Man's Year-Round Thrifting Habit Hands Out Free Halloween Costumes",
+        "body": "A Texas man has spent years quietly thrifting Halloween costumes, masks and accessories, filling his garage and now multiple storage units, so he can give them away free to families who can't afford store-bought outfits. He has donated more than 8,000 costumes in total and expects to hand out around 4,000 more this Halloween alone, turning a personal hobby into a community tradition.",
+        "source": "Good Good Good",
+        "url": "https://www.goodgoodgood.co/articles/good-news-this-week-october-31-2026"
+      },
+      {
+        "headline": "Free D.C. Concert Raises Over 200,000 Dollars for War-Torn Communities",
+        "body": "Punk band Turnstile headlined a free benefit concert on the National Mall that drew an estimated 60,000 fans, with crowds spilling past capacity barricades. The show raised more than 209,000 dollars to support humanitarian relief work in Palestine, Sudan and Lebanon, turning a single night of music into direct aid for civilians caught in ongoing conflicts.",
+        "source": "Good Good Good",
+        "url": "https://www.goodgoodgood.co/articles/good-news-this-week-october-31-2026"
+      }
+    ],
+    "onThisDay": [
+      {
+        "year": "1517",
+        "event": "Martin Luther reportedly posted his Ninety-Five Theses to the door of the Castle Church in Wittenberg, sparking the Protestant Reformation."
+      },
+      {
+        "year": "1941",
+        "event": "Sculptor Gutzon Borglum's Mount Rushmore National Memorial was declared complete after 14 years of work."
+      },
+      {
+        "year": "1984",
+        "event": "Indian Prime Minister Indira Gandhi was assassinated by her own bodyguards in New Delhi."
+      },
+      {
+        "year": "1926",
+        "event": "Famed escape artist and magician Harry Houdini died of peritonitis in Detroit."
+      }
+    ]
+  },
+  "topPicks": [
+    {
+      "headline": "White House Reportedly Preparing New Iran Strikes for Day After Midterms",
+      "teaser": "Reports suggest the administration is timing a major military escalation against Iran to follow US midterm elections."
+    },
+    {
+      "headline": "Anthropic Files for Nasdaq IPO Targeting Up to $2 Trillion Valuation",
+      "teaser": "A potential $2 trillion valuation would mark one of the largest tech IPOs ever, reshaping the AI industry landscape."
+    },
+    {
+      "headline": "Fed Holds Rates Steady as Tech Selloff and Data Gaps Cloud Outlook",
+      "teaser": "The Federal Reserve's steady-rate decision comes amid market turbulence and uncertainty over incomplete economic data."
+    }
+  ]
+}
